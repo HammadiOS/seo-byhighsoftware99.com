@@ -1,87 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- HOMEPAGE -->
-  <url>
-    <loc>https://seo-byhighsoftware99.com/</loc>
-    <lastmod>2025-04-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://seo-byhighsoftware99.com/</loc><lastmod>2025-04-10</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
 
   <!-- SERVICE PAGES -->
-  <url>
-    <loc>https://seo-byhighsoftware99.com/on-page-seo</loc>
-    <lastmod>2025-04-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://seo-byhighsoftware99.com/off-page-seo</loc>
-    <lastmod>2025-04-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://seo-byhighsoftware99.com/technical-seo</loc>
-    <lastmod>2025-04-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://seo-byhighsoftware99.com/local-seo</loc>
-    <lastmod>2025-04-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://seo-byhighsoftware99.com/ecommerce-seo</loc>
-    <lastmod>2025-04-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://seo-byhighsoftware99.com/youtube-seo</loc>
-    <lastmod>2025-04-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
+  <url><loc>https://seo-byhighsoftware99.com/on-page-seo</loc><lastmod>2025-04-10</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://seo-byhighsoftware99.com/off-page-seo</loc><lastmod>2025-04-10</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://seo-byhighsoftware99.com/technical-seo</loc><lastmod>2025-04-10</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://seo-byhighsoftware99.com/local-seo</loc><lastmod>2025-04-10</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://seo-byhighsoftware99.com/ecommerce-seo</loc><lastmod>2025-04-10</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://seo-byhighsoftware99.com/youtube-seo</loc><lastmod>2025-04-10</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
 
   <!-- LOCATION PAGES -->
-  <url>
-    <loc>https://seo-byhighsoftware99.com/seo-new-york</loc>
-    <lastmod>2025-04-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  <url><loc>https://seo-byhighsoftware99.com/seo-new-york</loc><lastmod>2025-04-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://seo-byhighsoftware99.com/seo-los-angeles</loc><lastmod>2025-04-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://seo-byhighsoftware99.com/seo-chicago</loc><lastmod>2025-04-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://seo-byhighsoftware99.com/seo-houston</loc><lastmod>2025-04-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
-  <url>
-    <loc>https://seo-byhighsoftware99.com/seo-los-angeles</loc>
-    <lastmod>2025-04-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  <!-- BLOG INDEX -->
+  <url><loc>https://seo-byhighsoftware99.com/blog</loc><lastmod>2025-04-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
-  <url>
-    <loc>https://seo-byhighsoftware99.com/seo-chicago</loc>
-    <lastmod>2025-04-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://seo-byhighsoftware99.com/seo-houston</loc>
-    <lastmod>2025-04-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  <!-- BLOG ARTICLES -->
+  <url><loc>https://seo-byhighsoftware99.com/blog/what-is-seo</loc><lastmod>2025-04-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://seo-byhighsoftware99.com/blog/how-to-rank-on-google-first-page</loc><lastmod>2025-04-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://seo-byhighsoftware99.com/blog/keyword-research-guide</loc><lastmod>2025-04-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://seo-byhighsoftware99.com/blog/on-page-seo-checklist</loc><lastmod>2025-04-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://seo-byhighsoftware99.com/blog/link-building-strategies</loc><lastmod>2025-04-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://seo-byhighsoftware99.com/blog/technical-seo-guide</loc><lastmod>2025-04-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://seo-byhighsoftware99.com/blog/local-seo-guide</loc><lastmod>2025-04-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://seo-byhighsoftware99.com/blog/ecommerce-seo-guide</loc><lastmod>2025-04-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://seo-byhighsoftware99.com/blog/youtube-seo-guide</loc><lastmod>2025-04-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://seo-byhighsoftware99.com/blog/seo-audit-guide</loc><lastmod>2025-04-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://seo-byhighsoftware99.com/blog/seo-tools-2025</loc><lastmod>2025-04-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
 </urlset>
