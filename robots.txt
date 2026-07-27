@@ -1,0 +1,6 @@
+# robots.txt for seo-byhighsoftware99.com
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://seo-byhighsoftware99.com/sitemap.xml
