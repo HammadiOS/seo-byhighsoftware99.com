@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Primary Hubs & Utility Pages -->
+  <!-- Homepage -->
   <url>
     <loc>https://seo-byhighsoftware99.com/index.html</loc>
     <lastmod>2026-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Category Hubs -->
   <url>
     <loc>https://seo-byhighsoftware99.com/technical-seo/index.html</loc>
     <lastmod>2026-07-27</lastmod>
@@ -19,53 +21,31 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <!-- Service Pages -->
   <url>
     <loc>https://seo-byhighsoftware99.com/on-page-seo.html</loc>
     <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://seo-byhighsoftware99.com/off-page-seo.html</loc>
     <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://seo-byhighsoftware99.com/ecommerce-seo.html</loc>
     <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://seo-byhighsoftware99.com/youtube-seo.html</loc>
     <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://seo-byhighsoftware99.com/about.html</loc>
-    <lastmod>2026-07-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://seo-byhighsoftware99.com/pricing.html</loc>
-    <lastmod>2026-07-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://seo-byhighsoftware99.com/contact.html</loc>
-    <lastmod>2026-07-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://seo-byhighsoftware99.com/terms-and-conditions.html</loc>
-    <lastmod>2026-07-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.85</priority>
   </url>
 
   <!-- Technical SEO Spokes -->
@@ -94,13 +74,15 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Local SEO Spokes & Location Pages -->
+  <!-- Local SEO Spokes -->
   <url>
     <loc>https://seo-byhighsoftware99.com/local-seo/citation-building-strategy.html</loc>
     <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Location Landing Pages -->
   <url>
     <loc>https://seo-byhighsoftware99.com/seo-new-york.html</loc>
     <lastmod>2026-07-27</lastmod>
@@ -126,11 +108,17 @@
     <priority>0.75</priority>
   </url>
 
-  <!-- Blog Index & Guide Pages -->
+  <!-- Blog Index & Guide Articles -->
   <url>
     <loc>https://seo-byhighsoftware99.com/blog.html</loc>
     <lastmod>2026-07-27</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://seo-byhighsoftware99.com/seo-instant-appear-highsoftware99-com.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
@@ -199,10 +187,30 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- Utility & Conversion Pages -->
   <url>
-    <loc>https://seo-byhighsoftware99.com/seo-instant-appear-highsoftware99-com.html</loc>
+    <loc>https://seo-byhighsoftware99.com/about.html</loc>
     <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://seo-byhighsoftware99.com/pricing.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://seo-byhighsoftware99.com/contact.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://seo-byhighsoftware99.com/terms-and-conditions.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>
