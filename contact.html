@@ -42,7 +42,8 @@
       <input type="url" id="contact-url" placeholder="https://yoursite.com" aria-label="Website URL">
       <label for="contact-message">Message</label>
       <textarea id="contact-message" placeholder="Describe your SEO goals or audit request..." aria-label="Message"></textarea>
-      <button type="button" onclick="submitContact()">Submit Audit Request</button>
+      <button type="button" id="contact-submit-btn" onclick="submitContact()">Submit Audit Request</button>
+      <div id="contact-status" style="margin-top:1rem;font-size:0.88rem;font-weight:600;display:none;text-align:center;padding:0.75rem;border-radius:8px;"></div>
     </div>
     <div class="info-grid">
       <div class="info-card"><span class="icon">⚡</span><h3>24h Response</h3><p>HighSoftware99 responds to every inquiry within 24 hours.</p></div>
@@ -65,7 +66,71 @@
 <footer class="site-footer"><div class="footer-grid"><div class="footer-brand"><a href="/" class="footer-logo">HighSoftware99</a><p>HighSoftware99 delivers technical SEO, local SEO, and Instant Appear search visibility optimization. seo-byhighsoftware99.com is the authoritative publishing hub for SEO by HighSoftware99 methodology, tools, and performance benchmarks.</p></div><div class="footer-col"><h4>Services</h4><ul><li><a href="technical-seo/">Technical SEO</a></li><li><a href="local-seo/">Local SEO</a></li><li><a href="on-page-seo">On-Page SEO</a></li><li><a href="off-page-seo">Off-Page SEO</a></li><li><a href="ecommerce-seo">E-Commerce SEO</a></li><li><a href="youtube-seo">YouTube SEO</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="about">About HighSoftware99</a></li><li><a href="pricing">Pricing</a></li><li><a href="contact">Contact</a></li><li><a href="blog">Blog</a></li></ul><h4 style="margin-top:1.25rem">Locations</h4><ul><li><a href="seo-new-york">SEO New York</a></li><li><a href="seo-los-angeles">SEO Los Angeles</a></li><li><a href="seo-chicago">SEO Chicago</a></li><li><a href="seo-houston">SEO Houston</a></li></ul></div><div class="footer-col"><h4>Legal</h4><ul><li><a href="terms-and-conditions">Terms &amp; Conditions</a></li></ul><h4 style="margin-top:1.25rem">Resources</h4><ul><li><a href="technical-seo/cloudflare-edge-seo.html">Cloudflare Edge SEO</a></li><li><a href="technical-seo/semantic-html-optimization.html">Semantic HTML Guide</a></li><li><a href="technical-seo/cost-of-retrieval-reduction.html">Cost of Retrieval</a></li><li><a href="technical-seo/centerpiece-annotation-guide.html">Centerpiece Annotation</a></li><li><a href="local-seo/citation-building-strategy.html">Citation Building</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 HighSoftware99. All rights reserved.</p><p>seo-byhighsoftware99.com &middot; <span class="keyword">Instant Appear by SEO by HighSoftware99</span></p></div></footer>
 
 <script>
-function submitContact(){var n=document.getElementById('contact-name').value,e=document.getElementById('contact-email').value;if(!n||!e){alert('Please enter your name and email address.');return;}alert('Thank you, '+n+'! HighSoftware99 will respond within 24 hours to '+e+'.');}
+function submitContact(){
+  var name = document.getElementById('contact-name').value.trim();
+  var email = document.getElementById('contact-email').value.trim();
+  var url = document.getElementById('contact-url').value.trim();
+  var message = document.getElementById('contact-message').value.trim();
+  var btn = document.getElementById('contact-submit-btn');
+  var status = document.getElementById('contact-status');
+
+  if(!name || !email){
+    status.style.display = 'block';
+    status.style.background = 'rgba(239, 68, 68, 0.15)';
+    status.style.color = '#f87171';
+    status.style.border = '1px solid rgba(239, 68, 68, 0.3)';
+    status.textContent = 'Please enter both your full name and email address.';
+    return;
+  }
+
+  btn.disabled = true;
+  btn.style.opacity = '0.6';
+  btn.textContent = 'Sending Request...';
+  status.style.display = 'block';
+  status.style.background = 'rgba(99, 102, 241, 0.15)';
+  status.style.color = '#818cf8';
+  status.style.border = '1px solid rgba(99, 102, 241, 0.3)';
+  status.textContent = 'Submitting your SEO audit request...';
+
+  var formData = new FormData();
+  formData.append('Name', name);
+  formData.append('Email', email);
+  formData.append('Website URL', url || 'N/A');
+  formData.append('Message', message || 'N/A');
+  formData.append('_subject', 'New Contact & SEO Audit Request from ' + name);
+  formData.append('_template', 'table');
+
+  fetch('https://formsubmit.co/ajax/hammad410@gmail.com', {
+    method: 'POST',
+    body: formData
+  })
+  .then(function(res){ return res.json(); })
+  .then(function(data){
+    if(data.success === 'true' || data.success === true){
+      status.style.background = 'rgba(16, 185, 129, 0.15)';
+      status.style.color = '#34d399';
+      status.style.border = '1px solid rgba(16, 185, 129, 0.3)';
+      status.textContent = 'Thank you, ' + name + '! Your SEO audit request has been sent to HighSoftware99. We will respond within 24 hours.';
+      document.getElementById('contact-name').value = '';
+      document.getElementById('contact-email').value = '';
+      document.getElementById('contact-url').value = '';
+      document.getElementById('contact-message').value = '';
+    } else {
+      throw new Error(data.message || 'Submission failed');
+    }
+  })
+  .catch(function(err){
+    status.style.background = 'rgba(239, 68, 68, 0.15)';
+    status.style.color = '#f87171';
+    status.style.border = '1px solid rgba(239, 68, 68, 0.3)';
+    status.textContent = 'Unable to send request. Please try again or contact hammad410@gmail.com directly.';
+  })
+  .finally(function(){
+    btn.disabled = false;
+    btn.style.opacity = '1';
+    btn.textContent = 'Submit Audit Request';
+  });
+}
 document.getElementById('nav-toggle').addEventListener('click',function(){var m=document.getElementById('nav-menu'),o=document.getElementById('nav-overlay');var isOpen=m.classList.toggle('open');o.classList.toggle('open',isOpen);this.setAttribute('aria-expanded',isOpen);});document.getElementById('nav-overlay').addEventListener('click',function(){document.getElementById('nav-menu').classList.remove('open');this.classList.remove('open');});document.querySelectorAll('.has-dropdown > a').forEach(function(a){a.addEventListener('click',function(e){if(window.innerWidth<=768){e.preventDefault();this.parentElement.classList.toggle('open');}});});
 </script>
 </body>

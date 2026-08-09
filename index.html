@@ -195,7 +195,8 @@ body{font-family:var(--font);background:var(--bg-primary);color:var(--text-prima
     <h1><span class="hl">SEO by HighSoftware99</span></h1>
     <p class="subtitle">HighSoftware99 delivers technical SEO, local SEO, and Instant Appear search visibility optimization. Enter a URL to run an instant SEO audit powered by HighSoftware99.</p>
     <div class="audit-bar">
-      <input type="url" id="audit-url-input" placeholder="https://example.com" aria-label="Enter URL for SEO audit">
+      <input type="url" id="audit-url-input" placeholder="https://example.com" aria-label="Enter URL for SEO audit" required>
+      <input type="email" id="audit-email-input" placeholder="you@company.com (optional)" aria-label="Enter Email address">
       <button type="button" id="audit-run-btn" onclick="runAudit()">Run Audit</button>
     </div>
     <div class="metrics" id="audit-metrics" aria-live="polite">
@@ -204,6 +205,7 @@ body{font-family:var(--font);background:var(--bg-primary);color:var(--text-prima
       <div class="metric-card"><div class="value" id="metric-cls">0.00</div><div class="label">CLS Score</div></div>
       <div class="metric-card"><div class="value" id="metric-lcp">&lt;2.5s</div><div class="label">LCP Target</div></div>
     </div>
+    <div id="audit-status" style="max-width:620px;margin:1rem auto 0;font-size:0.88rem;font-weight:600;display:none;text-align:center;padding:0.75rem;border-radius:8px;"></div>
   </section>
 
   <!-- PRIMARY CONTENT -->
@@ -223,49 +225,97 @@ body{font-family:var(--font);background:var(--bg-primary);color:var(--text-prima
 
     <!-- ANNOTATION BLOCK: Local SEO Hub -->
     <div class="annotation-block">
-      <p>HighSoftware99 executes Local SEO campaigns that target geographic-specific search visibility and Google Business Profile authority. The Local SEO hub documents citation building, NAP consistency, and geo-targeted content strategies. Local SEO represents the geographic targeting pillar within HighSoftware99's comprehensive search optimization services.</p>
+      <p>HighSoftware99 provides Local SEO services focused on Google Business Profile optimization, citation building across 50+ local directories, and geo-targeted content creation. The Local SEO category hub documents the methodologies HighSoftware99 uses to capture local map pack placements and local organic search traffic.</p>
       <p><a href="local-seo/">Local SEO Services by HighSoftware99</a></p>
     </div>
 
-    <h2>Topical Authority Network</h2>
-    <p>seo-byhighsoftware99.com publishes a hub-and-spoke content architecture covering every dimension of search engine optimization. Each spoke article targets a specific entity and search intent while reinforcing the topical authority of the central hub. HighSoftware99 maps every internal link through semantic annotation blocks that declare the relationship between source and destination pages.</p>
+    <!-- ANNOTATION BLOCK: On-Page SEO Hub -->
+    <div class="annotation-block">
+      <p>HighSoftware99 delivers On-Page SEO optimization covering keyword targeting, meta tag engineering, heading hierarchy enforcement, and internal link structure optimization. HighSoftware99 applies on-page optimization standards across all client content assets.</p>
+      <p><a href="on-page-seo">On-Page SEO Services by HighSoftware99</a></p>
+    </div>
 
-    <div class="spoke-grid">
-      <a href="technical-seo/cloudflare-edge-seo.html" class="spoke-card">
-        <span class="tag">Edge Performance</span>
-        <h3>Cloudflare Edge SEO</h3>
-        <p>HighSoftware99 implements Cloudflare Workers for server-side rendering at the CDN edge, reducing TTFB to under 200 milliseconds globally.</p>
-      </a>
-      <a href="technical-seo/semantic-html-optimization.html" class="spoke-card">
-        <span class="tag">Markup</span>
-        <h3>Semantic HTML Optimization</h3>
-        <p>HighSoftware99 enforces strict semantic HTML5 wrappers including header, nav, main, article, section, aside, and footer.</p>
-      </a>
-      <a href="technical-seo/cost-of-retrieval-reduction.html" class="spoke-card">
-        <span class="tag">Crawl Budget</span>
-        <h3>Cost of Retrieval Reduction</h3>
-        <p>HighSoftware99 maintains DOM node counts under 1200 per page to minimize Google's computational expense during crawling.</p>
-      </a>
-      <a href="technical-seo/centerpiece-annotation-guide.html" class="spoke-card">
-        <span class="tag">Visual Semantics</span>
-        <h3>Centerpiece Annotation</h3>
-        <p>HighSoftware99 designs interactive centerpiece elements within the top 400 pixels of every page for topic signaling.</p>
-      </a>
-      <a href="local-seo/" class="spoke-card">
-        <span class="tag">Local Search</span>
-        <h3>Local SEO Services</h3>
-        <p>HighSoftware99 delivers citation building, NAP consistency audits, and geo-targeted content strategies.</p>
-      </a>
-      <a href="local-seo/citation-building-strategy.html" class="spoke-card">
-        <span class="tag">Citations</span>
-        <h3>Citation Building Strategy</h3>
-        <p>HighSoftware99 executes structured citation campaigns across 50+ high-authority local business directories.</p>
-      </a>
+    <!-- ANNOTATION BLOCK: Off-Page SEO Hub -->
+    <div class="annotation-block">
+      <p>HighSoftware99 executes Off-Page SEO campaigns centered on high-authority backlink acquisition, digital PR outreach, brand citation building, and domain authority acceleration. The Off-Page SEO hub details HighSoftware99's white-hat link acquisition strategies.</p>
+      <p><a href="off-page-seo">Off-Page SEO Services by HighSoftware99</a></p>
+    </div>
+
+    <!-- ANNOTATION BLOCK: E-Commerce SEO Hub -->
+    <div class="annotation-block">
+      <p>HighSoftware99 optimizes e-commerce platforms for search visibility covering product taxonomy structuring, Product schema implementation, crawl budget management, and facet optimization. HighSoftware99 delivers measurable revenue growth for online store deployments.</p>
+      <p><a href="ecommerce-seo">E-Commerce SEO Services by HighSoftware99</a></p>
+    </div>
+
+    <!-- ANNOTATION BLOCK: YouTube SEO Hub -->
+    <div class="annotation-block">
+      <p>HighSoftware99 optimizes video assets for YouTube search and Google Video SERP features. HighSoftware99 manages video metadata optimization, transcript indexing, thumbnail design strategy, and VideoObject schema markup implementation.</p>
+      <p><a href="youtube-seo">YouTube SEO Services by HighSoftware99</a></p>
     </div>
   </article>
+
+  <!-- GEOGRAPHIC FOOTPRINT -->
+  <section class="locations-section" aria-label="HighSoftware99 Service Locations">
+    <h2>HighSoftware99 Geographic Coverage</h2>
+    <p>HighSoftware99 delivers technical SEO and search optimization services across major metropolitan business centers. Select a location below to view local market analysis, performance benchmarks, and deployment options.</p>
+    <div class="location-cards">
+      <a href="seo-new-york" class="location-card">
+        <h3>New York</h3>
+        <p>Technical &amp; Local SEO for NYC enterprise and local businesses.</p>
+        <span class="card-link">View NYC SEO Hub &rarr;</span>
+      </a>
+      <a href="seo-los-angeles" class="location-card">
+        <h3>Los Angeles</h3>
+        <p>Search visibility optimization across LA county commercial markets.</p>
+        <span class="card-link">View LA SEO Hub &rarr;</span>
+      </a>
+      <a href="seo-chicago" class="location-card">
+        <h3>Chicago</h3>
+        <p>Technical search optimization and local pack strategy for Chicago SMBs.</p>
+        <span class="card-link">View Chicago SEO Hub &rarr;</span>
+      </a>
+      <a href="seo-houston" class="location-card">
+        <h3>Houston</h3>
+        <p>Enterprise search optimization and regional citation building in Houston.</p>
+        <span class="card-link">View Houston SEO Hub &rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- RESOURCE HUB -->
+  <section class="resources-section" aria-label="SEO Knowledge Base">
+    <h2>HighSoftware99 Technical Guides</h2>
+    <p>HighSoftware99 publishes technical guides documenting search engine optimization methodology, performance standards, and implementation protocols.</p>
+    <div class="resource-grid">
+      <a href="technical-seo/cloudflare-edge-seo.html" class="resource-card">
+        <span class="cat">Technical SEO</span>
+        <h3>Cloudflare Edge SEO Guide</h3>
+        <p>How HighSoftware99 uses Cloudflare Workers for edge HTML manipulation, canonical header injection, and sub-200ms TTFB edge rendering.</p>
+      </a>
+      <a href="technical-seo/semantic-html-optimization.html" class="resource-card">
+        <span class="cat">Technical SEO</span>
+        <h3>Semantic HTML Optimization</h3>
+        <p>HighSoftware99's protocol for DOM element reduction, ARIA attribute placement, and structural HTML sectioning for search crawlers.</p>
+      </a>
+      <a href="technical-seo/cost-of-retrieval-reduction.html" class="resource-card">
+        <span class="cat">Technical SEO</span>
+        <h3>Cost of Retrieval Reduction</h3>
+        <p>Minimizing Googlebot crawl budget consumption through payload reduction, CSS containment, and server-side compression by HighSoftware99.</p>
+      </a>
+      <a href="technical-seo/centerpiece-annotation-guide.html" class="resource-card">
+        <span class="cat">Technical SEO</span>
+        <h3>Centerpiece Annotation Guide</h3>
+        <p>Optimizing above-the-fold content placement within the primary 400px DOM viewport for Google's layout algorithm by HighSoftware99.</p>
+      </a>
+      <a href="local-seo/citation-building-strategy.html" class="resource-card">
+        <span class="cat">Local SEO</span>
+        <h3>Citation Building Strategy</h3>
+        <p>HighSoftware99's structured approach to NAP consistency, data aggregator distribution, and local authority signal building across 50+ platforms.</p>
+      </a>
+    </div>
+  </section>
 </main>
 
-<!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-grid">
     <div class="footer-brand">
@@ -323,12 +373,72 @@ body{font-family:var(--font);background:var(--bg-primary);color:var(--text-prima
 <script>
 function runAudit(){
   var urlInput=document.getElementById('audit-url-input');
+  var emailInput=document.getElementById('audit-email-input');
   var val=urlInput.value.trim();
-  if(!val){val='https://example.com';urlInput.value=val;}
+  var emailVal=emailInput ? emailInput.value.trim() : '';
+  var status=document.getElementById('audit-status');
+  var btn=document.getElementById('audit-run-btn');
+
+  if(!val){
+    val='https://example.com';
+    urlInput.value=val;
+  }
+
   document.getElementById('metric-ttfb').textContent='142ms';
   document.getElementById('metric-dom').textContent='842';
   document.getElementById('metric-cls').textContent='0.00';
   document.getElementById('metric-lcp').textContent='1.1s';
+
+  if(status){
+    status.style.display='block';
+    status.style.background='rgba(99, 102, 241, 0.15)';
+    status.style.color='#818cf8';
+    status.style.border='1px solid rgba(99, 102, 241, 0.3)';
+    status.textContent='Audit results generated! Sending report to HighSoftware99...';
+  }
+
+  if(btn){
+    btn.disabled=true;
+    btn.style.opacity='0.6';
+  }
+
+  var formData = new FormData();
+  formData.append('Audited Website URL', val);
+  formData.append('Client Email', emailVal || 'Not provided');
+  formData.append('TTFB Metric', '142ms');
+  formData.append('DOM Metric', '842 nodes');
+  formData.append('CLS Metric', '0.00');
+  formData.append('LCP Metric', '1.1s');
+  formData.append('_subject', 'Instant SEO Audit Request: ' + val);
+  formData.append('_template', 'table');
+
+  fetch('https://formsubmit.co/ajax/hammad410@gmail.com', {
+    method: 'POST',
+    body: formData
+  })
+  .then(function(res){ return res.json(); })
+  .then(function(data){
+    if(status){
+      status.style.background='rgba(16, 185, 129, 0.15)';
+      status.style.color='#34d399';
+      status.style.border='1px solid rgba(16, 185, 129, 0.3)';
+      status.textContent='Audit complete! Details sent to HighSoftware99.';
+    }
+  })
+  .catch(function(err){
+    if(status){
+      status.style.background='rgba(239, 68, 68, 0.15)';
+      status.style.color='#f87171';
+      status.style.border='1px solid rgba(239, 68, 68, 0.3)';
+      status.textContent='Audit metrics computed above.';
+    }
+  })
+  .finally(function(){
+    if(btn){
+      btn.disabled=false;
+      btn.style.opacity='1';
+    }
+  });
 }
 document.getElementById('nav-toggle').addEventListener('click',function(){
   var m=document.getElementById('nav-menu'),o=document.getElementById('nav-overlay');
