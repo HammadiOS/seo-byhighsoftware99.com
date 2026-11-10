@@ -1,248 +1,347 @@
 {
   "domain": "seo-byhighsoftware99.com",
   "centralEntity": "HighSoftware99",
-  "centralQuery": "seobyhighsoftware99.com",
+  "centralQuery": "seo-byhighsoftware99.com",
   "secondaryEntities": ["SEO by HighSoftware99", "Instant Appear by SEO by HighSoftware99"],
   "architecture": "hub-and-spoke",
+  "lastUpdated": "2026-11-10",
   "hubs": [
     {
-      "url": "/index.html",
+      "url": "/",
       "role": "central-entity-homepage",
-      "title": "SEO by HighSoftware99 | Technical SEO, Local SEO & Instant Appear Services",
+      "title": "SEO by HighSoftware99 | Technical & Local SEO Services",
       "targetEntities": ["HighSoftware99", "SEO by HighSoftware99", "Instant Appear by SEO by HighSoftware99"],
       "searchIntent": "brand-navigational"
     },
     {
-      "url": "/technical-seo/index.html",
+      "url": "/tools/",
+      "role": "free-tools-hub",
+      "title": "Free Zero-API SEO Tools Suite | HighSoftware99",
+      "targetEntities": ["Free SEO Tools", "Client-Side SEO Utilities", "JSON-LD Generator", "DOM Auditor"],
+      "searchIntent": "transactional + tool-utility",
+      "spokes": [
+        {
+          "url": "/tools/serp-preview-tool",
+          "title": "Google SERP Snippet & Pixel Width Preview Tool | HS99",
+          "targetEntities": ["Title Tag Width Checker", "SERP Snippet Preview", "Open Graph Card Preview"],
+          "searchIntent": "tool-utility"
+        },
+        {
+          "url": "/tools/schema-markup-generator",
+          "title": "Free JSON-LD Schema Markup Generator | HighSoftware99",
+          "targetEntities": ["JSON-LD Schema Generator", "FAQPage Schema", "Article Schema", "LocalBusiness Schema"],
+          "searchIntent": "tool-utility"
+        },
+        {
+          "url": "/tools/robots-llms-txt-generator",
+          "title": "Free robots.txt & llms.txt Generator | HighSoftware99",
+          "targetEntities": ["robots.txt Generator", "llms.txt Generator", "AI Crawler Policy"],
+          "searchIntent": "tool-utility"
+        },
+        {
+          "url": "/tools/redirect-rule-generator",
+          "title": "Free Bulk 301 Redirect Rule Generator | HighSoftware99",
+          "targetEntities": ["301 Redirect Generator", "Cloudflare _redirects", "htaccess Redirects", "Nginx Redirects"],
+          "searchIntent": "tool-utility"
+        },
+        {
+          "url": "/tools/dom-html-auditor",
+          "title": "Free DOM Depth & HTML Ratio SEO Auditor | HighSoftware99",
+          "targetEntities": ["DOM Node Counter", "Text to HTML Ratio", "Zero-CORS Audit Bookmarklet"],
+          "searchIntent": "tool-utility"
+        }
+      ]
+    },
+    {
+      "url": "/technical-seo/",
       "role": "category-hub",
       "title": "Technical SEO Services by HighSoftware99",
       "targetEntities": ["Technical SEO", "Cloudflare Edge SEO", "Semantic HTML", "Cost of Retrieval", "Centerpiece Annotation"],
       "searchIntent": "informational + transactional",
       "spokes": [
         {
-          "url": "/technical-seo/cloudflare-edge-seo.html",
+          "url": "/technical-seo/cloudflare-edge-seo",
           "title": "Cloudflare Edge SEO for Sub-200ms TTFB",
           "targetEntities": ["Cloudflare Edge SEO", "CDN Rendering", "TTFB Optimization"],
-          "searchIntent": "informational"
+          "searchIntent": "informational + tool-utility"
         },
         {
-          "url": "/technical-seo/semantic-html-optimization.html",
+          "url": "/technical-seo/semantic-html-optimization",
           "title": "Semantic HTML Optimization for Search Engine Comprehension",
-          "targetEntities": ["Semantic HTML", "HTML5 Sectioning Elements", "Featured Snippet Eligibility"],
-          "searchIntent": "informational"
+          "targetEntities": ["Semantic HTML", "HTML5 Sectioning Elements", "Landmark Validator"],
+          "searchIntent": "informational + tool-utility"
         },
         {
-          "url": "/technical-seo/cost-of-retrieval-reduction.html",
+          "url": "/technical-seo/cost-of-retrieval-reduction",
           "title": "Cost of Retrieval Reduction: DOM Efficiency for Crawl Budget",
           "targetEntities": ["Cost of Retrieval", "DOM Optimization", "Crawl Budget"],
-          "searchIntent": "informational"
+          "searchIntent": "informational + tool-utility"
         },
         {
-          "url": "/technical-seo/centerpiece-annotation-guide.html",
+          "url": "/technical-seo/centerpiece-annotation-guide",
           "title": "Centerpiece Annotation Guide: Above-the-Fold Visual Semantics",
           "targetEntities": ["Centerpiece Annotation", "Visual Semantics", "Information Gain"],
-          "searchIntent": "informational"
+          "searchIntent": "informational + tool-utility"
         }
       ]
     },
     {
-      "url": "/local-seo/index.html",
+      "url": "/local-seo/",
       "role": "category-hub",
       "title": "Local SEO Services by HighSoftware99",
       "targetEntities": ["Local SEO", "Google Business Profile", "NAP Consistency", "Citation Building"],
       "searchIntent": "informational + transactional",
       "spokes": [
         {
-          "url": "/local-seo/citation-building-strategy.html",
+          "url": "/local-seo/citation-building-strategy",
           "title": "Citation Building Strategy for Local Search Authority",
           "targetEntities": ["Citation Building", "NAP Consistency", "Directory Authority"],
-          "searchIntent": "informational"
+          "searchIntent": "informational + tool-utility"
         }
       ]
+    },
+    {
+      "url": "/locations/",
+      "role": "regional-locations-hub",
+      "title": "City & Town Local SEO Directory | HighSoftware99",
+      "targetEntities": ["US City Local SEO", "50 State SEO Matrix", "Regional Search Marketing"],
+      "searchIntent": "local-transactional",
+      "childSitemap": "/sitemap-locations.xml",
+      "locationCount": 39
     }
   ],
   "servicePages": [
     {
-      "url": "/on-page-seo.html",
+      "url": "/on-page-seo",
       "role": "service-page",
-      "title": "On-Page SEO Services by HighSoftware99",
+      "title": "On-Page SEO Services | HighSoftware99",
       "targetEntities": ["On-Page SEO", "Keyword Optimization", "Meta Tag Engineering", "Heading Hierarchy"],
       "searchIntent": "transactional",
-      "parentHub": "/index.html"
+      "parentHub": "/"
     },
     {
-      "url": "/off-page-seo.html",
+      "url": "/off-page-seo",
       "role": "service-page",
-      "title": "Off-Page SEO Services by HighSoftware99",
+      "title": "Off-Page SEO & Digital PR Services | HighSoftware99",
       "targetEntities": ["Off-Page SEO", "Link Building", "Domain Authority", "Digital PR"],
       "searchIntent": "transactional",
-      "parentHub": "/index.html"
+      "parentHub": "/"
     },
     {
-      "url": "/ecommerce-seo.html",
+      "url": "/ecommerce-seo",
       "role": "service-page",
-      "title": "E-Commerce SEO Services by HighSoftware99",
+      "title": "E-Commerce SEO Services | HighSoftware99",
       "targetEntities": ["E-Commerce SEO", "Product Page Optimization", "Category Taxonomy", "Shopping Feed"],
       "searchIntent": "transactional",
-      "parentHub": "/index.html"
+      "parentHub": "/"
     },
     {
-      "url": "/youtube-seo.html",
+      "url": "/youtube-seo",
       "role": "service-page",
-      "title": "YouTube SEO Services by HighSoftware99",
+      "title": "YouTube SEO Services & Video Growth | HighSoftware99",
       "targetEntities": ["YouTube SEO", "Video Optimization", "Thumbnail CTR", "VideoObject Schema"],
       "searchIntent": "transactional",
-      "parentHub": "/index.html"
+      "parentHub": "/"
     }
   ],
   "blogGuides": [
     {
-      "url": "/blog.html",
+      "url": "/blog",
       "role": "blog-index",
-      "title": "SEO Knowledge Base by HighSoftware99",
+      "title": "SEO Guides, Playbooks & Research | HighSoftware99",
       "targetEntities": ["SEO Guides", "SEO Methodology"],
       "searchIntent": "informational"
     },
     {
-      "url": "/what-is-seo.html",
+      "url": "/what-is-seo",
       "role": "blog-guide",
-      "title": "What Is SEO: Complete Search Engine Optimization Definition by HighSoftware99",
+      "title": "What Is SEO? Search Engine Optimization Guide",
       "targetEntities": ["SEO Definition", "Search Engine Optimization", "Organic Search"],
       "searchIntent": "informational"
     },
     {
-      "url": "/keyword-research-guide.html",
+      "url": "/keyword-research-guide",
       "role": "blog-guide",
-      "title": "Keyword Research Guide by HighSoftware99",
+      "title": "Keyword Research Guide: Free Workflows & Clustering",
       "targetEntities": ["Keyword Research", "Search Volume", "Long-Tail Keywords"],
       "searchIntent": "informational"
     },
     {
-      "url": "/on-page-seo-checklist.html",
+      "url": "/on-page-seo-checklist",
       "role": "blog-guide",
-      "title": "On-Page SEO Checklist by HighSoftware99",
+      "title": "On-Page SEO Checklist (2026) | HighSoftware99",
       "targetEntities": ["On-Page SEO Checklist", "Title Tags", "Meta Descriptions"],
+      "searchIntent": "informational + tool-utility"
+    },
+    {
+      "url": "/link-building-strategies",
+      "role": "blog-guide",
+      "title": "Link Building Strategies & Digital PR Guide",
+      "targetEntities": ["Link Building", "Backlink Acquisition", "Digital PR"],
       "searchIntent": "informational"
     },
     {
-      "url": "/link-building-strategies.html",
+      "url": "/technical-seo-guide",
       "role": "blog-guide",
-      "title": "Link Building Strategies by HighSoftware99",
-      "targetEntities": ["Link Building", "Backlink Acquisition", "Guest Posting"],
-      "searchIntent": "informational"
-    },
-    {
-      "url": "/technical-seo-guide.html",
-      "role": "blog-guide",
-      "title": "Technical SEO Guide by HighSoftware99",
+      "title": "Technical SEO Guide: Crawl, Index, CWV & Edge",
       "targetEntities": ["Technical SEO Guide", "Core Web Vitals", "Crawlability"],
       "searchIntent": "informational"
     },
     {
-      "url": "/local-seo-guide.html",
+      "url": "/local-seo-guide",
       "role": "blog-guide",
-      "title": "Local SEO Guide by HighSoftware99",
+      "title": "Local SEO Guide: GBP, Citations & Reviews",
       "targetEntities": ["Local SEO Guide", "Google Business Profile", "Local Pack"],
       "searchIntent": "informational"
     },
     {
-      "url": "/ecommerce-seo-guide.html",
+      "url": "/ecommerce-seo-guide",
       "role": "blog-guide",
-      "title": "E-Commerce SEO Guide by HighSoftware99",
+      "title": "E-Commerce SEO Guide: Facets, Schema & Feeds",
       "targetEntities": ["E-Commerce SEO Guide", "Product Schema", "Faceted Navigation"],
       "searchIntent": "informational"
     },
     {
-      "url": "/youtube-seo-guide.html",
+      "url": "/youtube-seo-guide",
       "role": "blog-guide",
-      "title": "YouTube SEO Guide by HighSoftware99",
+      "title": "YouTube SEO Guide: Video Search & Chapters",
       "targetEntities": ["YouTube SEO Guide", "Video Ranking", "YouTube Algorithm"],
       "searchIntent": "informational"
     },
     {
-      "url": "/seo-audit-guide.html",
+      "url": "/seo-audit-guide",
       "role": "blog-guide",
-      "title": "SEO Audit Guide by HighSoftware99",
+      "title": "Free Technical SEO Audit Guide (2026 Playbook)",
       "targetEntities": ["SEO Audit", "Technical Audit", "Content Audit"],
       "searchIntent": "informational"
     },
     {
-      "url": "/seo-tools-2025.html",
+      "url": "/seo-tools-2025",
       "role": "blog-guide",
-      "title": "SEO Tools 2025 by HighSoftware99",
-      "targetEntities": ["SEO Tools", "Keyword Tools", "Technical SEO Tools"],
+      "title": "Free SEO Tools Without API Limits | HighSoftware99",
+      "targetEntities": ["SEO Tools", "Free Browser SEO Tools", "Technical SEO Tools"],
+      "searchIntent": "informational + tool-utility"
+    },
+    {
+      "url": "/how-to-rank-on-google-first-page",
+      "role": "blog-guide",
+      "title": "How to Rank on Google First Page in 2026",
+      "targetEntities": ["Google First Page Ranking", "SEO Strategy", "CTR Optimization"],
       "searchIntent": "informational"
     },
     {
-      "url": "/how-to-rank-on-google-first-page.html",
-      "role": "blog-guide",
-      "title": "How to Rank on Google First Page by HighSoftware99",
-      "targetEntities": ["Google First Page Ranking", "SEO Strategy", "Ranking Factors"],
-      "searchIntent": "informational"
-    },
-    {
-      "url": "/seo-instant-appear-highsoftware99-com.html",
+      "url": "/seo-instant-appear-highsoftware99-com",
       "role": "cornerstone-content",
-      "title": "SEO Instant Appear by HighSoftware99: Accelerated Search Visibility Framework",
+      "title": "SEO Instant Appear Framework | HighSoftware99",
       "targetEntities": ["Instant Appear", "AI Search Visibility", "Structured Content SEO"],
       "searchIntent": "informational + brand"
+    },
+    {
+      "url": "/ai-overviews-september-2026-seo-impact",
+      "role": "ai-seo-article",
+      "searchIntent": "informational"
+    },
+    {
+      "url": "/llm-search-engine-optimization-trends-2026",
+      "role": "ai-seo-article",
+      "searchIntent": "informational"
+    },
+    {
+      "url": "/generative-engine-optimization-geo-guide",
+      "role": "ai-seo-article",
+      "searchIntent": "informational"
+    },
+    {
+      "url": "/ai-content-quality-google-hcu-2026",
+      "role": "ai-seo-article",
+      "searchIntent": "informational"
+    },
+    {
+      "url": "/agentic-ai-seo-automation-2026",
+      "role": "ai-seo-article",
+      "searchIntent": "informational"
+    },
+    {
+      "url": "/multimodal-visual-search-seo-2026",
+      "role": "ai-seo-article",
+      "searchIntent": "informational"
+    },
+    {
+      "url": "/semantic-entity-graph-indexing-2026",
+      "role": "ai-seo-article",
+      "searchIntent": "informational"
+    },
+    {
+      "url": "/ai-driven-programmatic-seo-scale",
+      "role": "ai-seo-article",
+      "searchIntent": "informational"
+    },
+    {
+      "url": "/realtime-llm-web-crawling-seo",
+      "role": "ai-seo-article",
+      "searchIntent": "informational"
+    },
+    {
+      "url": "/predictive-seo-ai-ranking-models",
+      "role": "ai-seo-article",
+      "searchIntent": "informational"
     }
   ],
   "locationPages": [
     {
-      "url": "/seo-new-york.html",
+      "url": "/seo-new-york",
       "role": "location-page",
-      "title": "SEO Services New York by HighSoftware99",
+      "title": "SEO New York Services | HighSoftware99",
       "targetEntities": ["SEO New York", "Local SEO NYC"],
       "searchIntent": "local-transactional",
-      "parentHub": "/local-seo/index.html"
+      "parentHub": "/local-seo/"
     },
     {
-      "url": "/seo-los-angeles.html",
+      "url": "/seo-los-angeles",
       "role": "location-page",
-      "title": "SEO Services Los Angeles by HighSoftware99",
+      "title": "SEO Los Angeles Services | HighSoftware99",
       "targetEntities": ["SEO Los Angeles", "Local SEO LA"],
       "searchIntent": "local-transactional",
-      "parentHub": "/local-seo/index.html"
+      "parentHub": "/local-seo/"
     },
     {
-      "url": "/seo-chicago.html",
+      "url": "/seo-chicago",
       "role": "location-page",
-      "title": "SEO Services Chicago by HighSoftware99",
+      "title": "SEO Chicago Services | HighSoftware99",
       "targetEntities": ["SEO Chicago", "Local SEO Chicago"],
       "searchIntent": "local-transactional",
-      "parentHub": "/local-seo/index.html"
+      "parentHub": "/local-seo/"
     },
     {
-      "url": "/seo-houston.html",
+      "url": "/seo-houston",
       "role": "location-page",
-      "title": "SEO Services Houston by HighSoftware99",
+      "title": "SEO Houston Services | HighSoftware99",
       "targetEntities": ["SEO Houston", "Local SEO Houston"],
       "searchIntent": "local-transactional",
-      "parentHub": "/local-seo/index.html"
+      "parentHub": "/local-seo/"
     }
   ],
   "utilityPages": [
     {
-      "url": "/about.html",
+      "url": "/about",
       "title": "About HighSoftware99",
       "role": "entity-description",
       "targetEntities": ["HighSoftware99", "SEO Methodology", "Instant Appear Framework"]
     },
     {
-      "url": "/contact.html",
+      "url": "/contact",
       "title": "Contact HighSoftware99",
       "role": "conversion-page",
       "targetEntities": ["SEO Audit Request", "Consultation"]
     },
     {
-      "url": "/pricing.html",
+      "url": "/pricing",
       "title": "SEO Pricing by HighSoftware99",
       "role": "conversion-page",
       "targetEntities": ["SEO Pricing", "Service Plans", "ROI"]
     },
     {
-      "url": "/terms-and-conditions.html",
+      "url": "/terms-and-conditions",
       "title": "Terms & Conditions",
       "role": "legal-page"
     }
@@ -250,13 +349,13 @@
   "deprecatedRedirects": [
     {
       "url": "/local-seo.html",
-      "redirectsTo": "/local-seo/index.html",
-      "reason": "Duplicate content — canonical hub exists at /local-seo/index.html"
+      "redirectsTo": "/local-seo/",
+      "reason": "Duplicate content — canonical hub exists at /local-seo/"
     },
     {
       "url": "/technical-seo.html",
-      "redirectsTo": "/technical-seo/index.html",
-      "reason": "Duplicate content — canonical hub exists at /technical-seo/index.html"
+      "redirectsTo": "/technical-seo/",
+      "reason": "Duplicate content — canonical hub exists at /technical-seo/"
     }
   ]
 }

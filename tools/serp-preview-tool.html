@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a0e1a">
+<title>Google SERP Preview &amp; Title Pixel Checker | HighSoftware99</title>
+<meta name="description" content="Free SERP simulator and title/meta description pixel width checker. Measure exact desktop (580px) and mobile (920px) Google truncation plus bulk title audits.">
+<meta name="keywords" content="SERP preview tool, Google title pixel checker, meta description length checker, CTR simulator, HighSoftware99">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://seo-byhighsoftware99.com/tools/serp-preview-tool">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"HighSoftware99 SERP Title & Meta Pixel Checker","applicationCategory":"WebApplication","operatingSystem":"Web","url":"https://seo-byhighsoftware99.com/tools/serp-preview-tool","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@id":"https://seo-byhighsoftware99.com/#organization"},"description":"Client-side Google SERP simulator that calculates exact pixel widths for page titles (580px desktop) and meta descriptions (920px desktop / 680px mobile)."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"SEO by HighSoftware99","item":"https://seo-byhighsoftware99.com/"},{"@type":"ListItem","position":2,"name":"Free SEO Tools","item":"https://seo-byhighsoftware99.com/tools/"},{"@type":"ListItem","position":3,"name":"SERP Preview Tool","item":"https://seo-byhighsoftware99.com/tools/serp-preview-tool"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why does pixel width matter more than character count for Google titles?","acceptedAnswer":{"@type":"Answer","text":"Google truncates search result titles at roughly 580–600 pixels on desktop using a proportional sans-serif font, not a fixed character count. Wide letters like W and M consume twice the pixels of i or l, so 55 uppercase characters can truncate while 62 lowercase characters fit cleanly."}},{"@type":"Question","name":"What is the ideal meta description pixel width and length?","acceptedAnswer":{"@type":"Answer","text":"Aim for 135–155 characters (under 920px on desktop and ~680px on mobile). Front-load the value proposition in the first 120 characters so mobile searchers still see the primary call to action before ellipsis truncation."}},{"@type":"Question","name":"How does this SERP preview tool measure pixels without an API?","acceptedAnswer":{"@type":"Answer","text":"The tool uses the browser HTML5 Canvas 2D measureText() API with Google SERP font weights (20px Arial for titles and 14px Arial for snippets) locally inside your browser."}}]}]}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--bg-primary:#0a0e1a;--bg-secondary:#0f1320;--bg-card:#1a1f35;--accent-1:#6366f1;--accent-2:#818cf8;--accent-3:#a78bfa;--accent-ok:#34d399;--accent-warn:#fbbf24;--accent-bad:#f87171;--text-primary:#f1f5f9;--text-secondary:#a0aec0;--text-muted:#8b95a8;--border:#1e293b;--glow:rgba(99,102,241,.16);--radius:12px;--font:'Inter',system-ui,-apple-system,sans-serif;--mono:'Fira Code',monospace}html{font-size:16px;scroll-behavior:smooth}body{font-family:var(--font);background:var(--bg-primary);color:var(--text-primary);line-height:1.7;-webkit-font-smoothing:antialiased}
+.skip-link{position:absolute;top:-100%;left:50%;transform:translateX(-50%);background:var(--accent-1);color:#fff;padding:.75rem 1.5rem;border-radius:0 0 8px 8px;font-weight:700;font-size:.9rem;z-index:9999;text-decoration:none}.skip-link:focus{top:0}*:focus-visible{outline:2px solid var(--accent-2);outline-offset:2px;border-radius:4px}
+.site-header{position:sticky;top:0;z-index:100;background:rgba(10,14,26,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}.nav-inner{max-width:1200px;margin:0 auto;padding:.65rem 2rem;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}.brand-mark{background:linear-gradient(135deg,var(--accent-1),var(--accent-3));color:#fff;font-weight:900;font-size:.7rem;padding:.3rem .55rem;border-radius:6px}.brand-name{font-weight:700;font-size:.9rem;color:var(--text-primary)}.brand-name span{color:var(--accent-2)}.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:.5rem;flex-direction:column;gap:4px;min-width:44px;min-height:44px;align-items:center;justify-content:center}.nav-toggle span{display:block;width:20px;height:2px;background:var(--text-primary);border-radius:2px}.nav-links{list-style:none;display:flex;align-items:center;gap:.15rem}.nav-links>li{position:relative}.nav-links>li>a{color:var(--text-secondary);text-decoration:none;font-size:.8rem;font-weight:500;padding:.45rem .7rem;border-radius:8px;display:flex;align-items:center;gap:.3rem}.nav-links>li>a:hover{color:var(--text-primary);background:rgba(99,102,241,.08)}.nav-cta{background:linear-gradient(135deg,var(--accent-1),var(--accent-3))!important;color:#fff!important;font-weight:600!important;padding:.45rem 1.1rem!important;border-radius:8px!important}.caret{display:inline-block;width:4px;height:4px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg)}.dropdown{position:absolute;top:calc(100% + 4px);left:0;min-width:210px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:.4rem;list-style:none;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s;box-shadow:0 8px 32px rgba(0,0,0,.35)}.has-dropdown:hover .dropdown,.has-dropdown:focus-within .dropdown{opacity:1;visibility:visible;transform:translateY(0)}.dropdown a{display:block;padding:.4rem .7rem;color:var(--text-secondary);text-decoration:none;font-size:.8rem;border-radius:6px}.dropdown a:hover{color:var(--text-primary);background:rgba(99,102,241,.1)}
+.breadcrumb{max-width:1060px;margin:0 auto;padding:.85rem 2rem 0}.breadcrumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:.35rem;font-size:.78rem;color:var(--text-muted)}.breadcrumb li+li::before{content:'›';margin-right:.35rem}.breadcrumb a{color:var(--accent-2);text-decoration:none}
+.hero{padding:2rem 2rem 1.25rem;text-align:center}.hero h1{font-size:clamp(1.7rem,4vw,2.5rem);font-weight:900;letter-spacing:-.03em;margin-bottom:.6rem}.hero h1 .hl{background:linear-gradient(135deg,var(--accent-1),var(--accent-ok));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.hero .subtitle{font-size:1rem;color:var(--text-secondary);max-width:680px;margin:0 auto}
+.workspace{max-width:1060px;margin:1rem auto 2.5rem;padding:0 2rem;display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start}
+.panel{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem}
+.panel h2{font-size:1.05rem;font-weight:800;margin-bottom:1rem;color:var(--text-primary)}
+.field{display:flex;flex-direction:column;gap:.3rem;margin-bottom:1.1rem}.field label{font-size:.78rem;font-weight:700;color:var(--text-secondary)}.hint{font-size:.74rem;color:var(--text-muted)}
+.field input,.field textarea{width:100%;min-height:48px;padding:.7rem .9rem;border-radius:8px;border:1px solid var(--border);background:var(--bg-primary);color:var(--text-primary);font:inherit;font-size:max(1rem,1em)}.field textarea{min-height:92px;resize:vertical}
+.meter{height:6px;background:var(--bg-primary);border-radius:999px;overflow:hidden;margin-top:.3rem}.meter-fill{height:100%;width:0;background:var(--accent-ok);transition:width .15s,background .15s}
+.stat-line{display:flex;justify-content:space-between;font-size:.76rem;color:var(--text-muted);margin-top:.2rem}.stat-badge{font-weight:700}
+.good{color:var(--accent-ok)}.warn{color:var(--accent-warn)}.bad{color:var(--accent-bad)}
+.toggle-row{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1rem;font-size:.82rem}.toggle-row label{display:flex;align-items:center;gap:.4rem;cursor:pointer;color:var(--text-secondary);min-height:36px}.toggle-row input{accent-color:var(--accent-1);width:16px;height:16px}
+.tablist{display:flex;gap:.25rem;border-bottom:1px solid var(--border);margin-bottom:1rem}.tablist button{position:relative;background:none;border:none;color:var(--text-secondary);font:inherit;font-size:.86rem;font-weight:600;padding:.55rem .9rem;cursor:pointer;min-height:44px}.tablist button[aria-selected="true"]{color:var(--accent-2)}.tablist button[aria-selected="true"]::after{content:"";position:absolute;inset:auto 0 0;border-block-end:3px solid var(--accent-2)}
+.serp-box{background:#fff;color:#202124;border-radius:10px;padding:1.25rem;font-family:Arial,sans-serif;box-shadow:0 8px 24px rgba(0,0,0,.35)}.serp-box.mobile{max-width:390px;margin:0 auto}
+.serp-cite{display:flex;align-items:center;gap:.6rem;margin-bottom:.35rem}.serp-fav{width:26px;height:26px;border-radius:50%;background:#1a73e8;color:#fff;font-weight:700;font-size:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}.serp-brand{font-size:14px;color:#202124;line-height:1.2}.serp-url{font-size:12px;color:#4d5156;line-height:1.3;word-break:break-all}
+.serp-title{font-size:20px;line-height:1.3;color:#1a0dab;font-weight:400;margin-bottom:4px;word-wrap:break-word}.serp-box.mobile .serp-title{font-size:18px}
+.serp-desc{font-size:14px;line-height:1.58;color:#4d5156}.serp-date{color:#70757a}
+.serp-rich{margin-top:6px;font-size:13px;color:#70757a;display:flex;gap:.5rem;align-items:center}
+.check-list{list-style:none;margin-top:1rem;display:grid;gap:.45rem;font-size:.82rem}.check-list li{padding:.45rem .7rem;background:var(--bg-secondary);border-radius:8px;border:1px solid var(--border);display:flex;justify-content:space-between;gap:.5rem}
+.code-wrap{position:relative;margin-top:1rem;background:var(--bg-primary);border:1px solid var(--border);border-radius:8px;padding:.85rem}.code-wrap pre{overflow-x:auto;padding-inline-end:3.25rem;font-family:var(--mono);font-size:.78rem;color:#c7d2fe;line-height:1.5}
+.copy{position:absolute;inset-block-start:.5rem;inset-inline-end:.5rem;display:inline-flex;align-items:center;gap:.4rem}.copy-button{min-inline-size:32px;min-block-size:32px;padding:.3rem .65rem;border-radius:6px;border:1px solid var(--border);background:var(--bg-card);color:var(--text-primary);font:inherit;font-size:.74rem;font-weight:600;cursor:pointer}.tip{font-size:.72rem;color:var(--accent-ok);opacity:0;transition:opacity .15s}.copy-button[data-copied]+.tip,.copy-button[data-failed]+.tip{opacity:1}
+.bulk-panel{max-width:1060px;margin:0 auto 2.5rem;padding:0 2rem}.table-wrapper{overflow:auto;max-inline-size:100%;margin-top:1rem;border:1px solid var(--border);border-radius:var(--radius);container-type:inline-size}.data-table{width:100%;border-collapse:separate;border-spacing:0;font-size:.84rem}.data-table th,.data-table td{padding:.65rem .9rem;text-align:left;border-bottom:1px solid var(--border)}.data-table thead th{background:var(--bg-secondary);color:var(--text-primary);font-size:.72rem;text-transform:uppercase}
+.content-section{max-width:860px;margin:0 auto;padding:1.5rem 2rem}.content-section h2{font-size:1.55rem;font-weight:800;margin-bottom:.9rem}.content-section h3{font-size:1.15rem;font-weight:700;margin:1.35rem 0 .6rem}.content-section p,.content-section li{color:var(--text-secondary);margin-bottom:.95rem}.content-section ul{padding-left:1.35rem}
+.faq-section{max-width:860px;margin:1.5rem auto 2rem;padding:0 2rem}.faq-section h2{font-size:1.45rem;font-weight:800;margin-bottom:1rem}.faq-section details{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:.65rem}.faq-section summary{padding:.9rem 1.2rem;cursor:pointer;font-weight:700;font-size:.92rem}.faq-section details p{padding:.25rem 1.2rem 1rem;color:var(--text-secondary);font-size:.88rem}
+.site-footer{border-top:1px solid var(--border);background:var(--bg-secondary);margin-top:3rem}.footer-grid{max-width:1200px;margin:0 auto;padding:3rem 2rem 2rem;display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:2.5rem}.footer-brand .footer-logo{font-weight:800;font-size:1.1rem;color:var(--accent-2);text-decoration:none;display:block;margin-bottom:.75rem}.footer-brand p{font-size:.82rem;color:var(--text-muted);line-height:1.7}.footer-col h4{font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-muted);margin-bottom:.75rem;font-weight:600}.footer-col ul{list-style:none}.footer-col li{margin-bottom:.35rem}.footer-col a{color:var(--text-secondary);text-decoration:none;font-size:.82rem}.footer-bottom{max-width:1200px;margin:0 auto;padding:1.25rem 2rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}.footer-bottom p{color:var(--text-muted);font-size:.72rem}.footer-bottom .keyword{color:var(--accent-3);font-weight:600}
+@media(max-width:880px){.workspace{grid-template-columns:1fr}}
+@media(max-width:768px){.nav-toggle{display:flex}.nav-menu{position:fixed;top:0;right:-300px;width:280px;height:100vh;background:var(--bg-primary);border-left:1px solid var(--border);padding:4rem 1.5rem 2rem;transition:right .3s;z-index:200;overflow-y:auto}.nav-menu.open{right:0}.nav-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:150}.nav-overlay.open{display:block}.nav-links{flex-direction:column;align-items:stretch;gap:0}.nav-links>li>a{padding:.7rem .5rem;font-size:.9rem}.dropdown{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:none;background:transparent;padding:0 0 .5rem 1rem;display:none}.has-dropdown.open .dropdown{display:block}.footer-grid{grid-template-columns:1fr 1fr;gap:2rem}}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<header class="site-header"><nav class="nav-inner" aria-label="Primary"><a href="../" class="brand"><span class="brand-mark">HS99</span><span class="brand-name">SEO by <span>HighSoftware99</span></span></a><button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button><div class="nav-overlay" id="nav-overlay"></div><div class="nav-menu" id="nav-menu"><ul class="nav-links"><li class="has-dropdown"><a href="../technical-seo/" aria-haspopup="true">Services <span class="caret" aria-hidden="true"></span></a><ul class="dropdown"><li><a href="../technical-seo/">Technical SEO</a></li><li><a href="../local-seo/">Local SEO</a></li><li><a href="../on-page-seo">On-Page SEO</a></li><li><a href="../off-page-seo">Off-Page SEO</a></li><li><a href="../ecommerce-seo">E-Commerce SEO</a></li><li><a href="../youtube-seo">YouTube SEO</a></li></ul></li><li class="has-dropdown"><a href="../locations/" aria-haspopup="true">Locations <span class="caret" aria-hidden="true"></span></a><ul class="dropdown"><li><a href="../locations/">All Service Locations</a></li><li><a href="../seo-new-york">SEO New York</a></li><li><a href="../seo-los-angeles">SEO Los Angeles</a></li><li><a href="../seo-chicago">SEO Chicago</a></li><li><a href="../seo-houston">SEO Houston</a></li></ul></li><li><a href="../tools/">Tools</a></li><li><a href="../blog">Blog</a></li><li><a href="../about">About</a></li><li><a href="../pricing">Pricing</a></li><li><a href="../contact" class="nav-cta">Get Audit</a></li></ul></div></nav></header>
+
+<main id="main-content">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="../">Home</a></li><li><a href="./">Free SEO Tools</a></li><li aria-current="page">SERP Preview Tool</li></ol></nav>
+
+  <section class="hero" aria-label="SERP Title and Meta Pixel Checker">
+    <h1>Google <span class="hl">SERP Pixel Width</span> Simulator</h1>
+    <p class="subtitle">Check real pixel widths for Google desktop (580px title / 920px snippet) and mobile SERPs before publishing—stop losing clicks to mid-word title truncation.</p>
+  </section>
+
+  <section class="workspace" aria-label="Interactive SERP Simulator">
+    <div class="panel">
+      <h2>1. Enter Title, Description &amp; URL</h2>
+      <div class="field">
+        <label for="s-keyword">Target Keyword (optional — checks front-loading &amp; bolding)</label>
+        <input type="text" id="s-keyword" value="technical seo audit" placeholder="e.g. technical seo audit">
+      </div>
+      <div class="field">
+        <label for="s-title">Page Title (&lt;title&gt;)</label>
+        <span class="hint" id="s-title-hint">Target 350–580 px (roughly 45–60 characters).</span>
+        <input type="text" id="s-title" aria-describedby="s-title-hint" value="Technical SEO Audit Checklist (2026) | Free Tool & Guide" autocomplete="off">
+        <div class="meter"><div class="meter-fill" id="m-title"></div></div>
+        <div class="stat-line"><span id="t-chars">0 chars</span><span class="stat-badge" id="t-px">0 / 580 px</span></div>
+      </div>
+      <div class="field">
+        <label for="s-desc">Meta Description</label>
+        <span class="hint" id="s-desc-hint">Target 680–920 px (130–155 chars) so mobile CTA stays visible.</span>
+        <textarea id="s-desc" aria-describedby="s-desc-hint">Run a fast technical SEO audit in 60 seconds. Check DOM size, Core Web Vitals, canonicals, and schema markup free with zero login.</textarea>
+        <div class="meter"><div class="meter-fill" id="m-desc"></div></div>
+        <div class="stat-line"><span id="d-chars">0 chars</span><span class="stat-badge" id="d-px">0 / 920 px</span></div>
+      </div>
+      <div class="field">
+        <label for="s-url">Canonical Page URL</label>
+        <input type="url" id="s-url" value="https://seo-byhighsoftware99.com/seo-audit-guide" autocorrect="off" autocapitalize="none" spellcheck="false">
+      </div>
+      <div class="toggle-row">
+        <label><input type="checkbox" id="opt-date"> Show publish date</label>
+        <label><input type="checkbox" id="opt-rating"> Preview rich rating snippet</label>
+      </div>
+      <div class="code-wrap">
+        <span class="copy">
+          <button type="button" class="copy-button" command="--copy" commandfor="meta-output" aria-label="Copy HTML title and meta tags">Copy HTML</button>
+          <span class="tip" role="status"></span>
+        </span>
+        <pre role="region" aria-label="Generated HTML head tags" tabindex="0"><code id="meta-output"></code></pre>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>2. Live Google Search Preview &amp; Audit</h2>
+      <div class="tablist" role="tablist" aria-label="Device preview mode">
+        <button type="button" role="tab" id="tab-desktop" aria-selected="true">Desktop (580px)</button>
+        <button type="button" role="tab" id="tab-mobile" aria-selected="false">Mobile (390px)</button>
+      </div>
+      <div class="serp-box" id="serp-box">
+        <div class="serp-cite">
+          <div class="serp-fav" id="p-fav">S</div>
+          <div>
+            <div class="serp-brand" id="p-site">seo-byhighsoftware99.com</div>
+            <div class="serp-url" id="p-crumb">https://seo-byhighsoftware99.com &rsaquo; seo-audit-guide</div>
+          </div>
+        </div>
+        <div class="serp-title" id="p-title"></div>
+        <div class="serp-desc"><span class="serp-date" id="p-date" hidden>Nov 10, 2026 &mdash; </span><span id="p-desc"></span></div>
+        <div class="serp-rich" id="p-rich" hidden>★★★★★ Rating: 4.9 &middot; 128 reviews &middot; Free</div>
+      </div>
+      <ul class="check-list" id="ctr-checks" aria-live="polite"></ul>
+    </div>
+  </section>
+
+  <section class="bulk-panel" aria-label="Bulk Title Pixel Checker">
+    <div class="panel">
+      <h2>3. Bulk Title &amp; Meta Pixel Auditor (Paste CSV or Pipe-Separated Lines)</h2>
+      <div class="field">
+        <label for="bulk-input">Paste one page per line as <code>Title | Meta Description</code></label>
+        <textarea id="bulk-input" spellcheck="false" style="min-height:110px">Google AI Overviews September 2026 Update: Zero-Click Recovery Playbook | HighSoftware99 AI & SEO September 2026 News | Google's September 2026 core rollout expanded AI Overviews to commercial search queries.
+Free Technical SEO Audit Tool | HighSoftware99 | Run an instant browser-native technical SEO check for DOM nodes, headings, and schema markup.</textarea>
+      </div>
+      <button type="button" id="run-bulk-btn" class="chip-btn" style="background:linear-gradient(135deg,var(--accent-1),var(--accent-3));color:#fff;border:none;padding:.65rem 1.25rem;">Audit All Lines</button>
+      <div class="table-wrapper" tabindex="0" role="region" aria-labelledby="bulk-cap">
+        <table class="data-table">
+          <caption id="bulk-cap" style="padding:.65rem .9rem;text-align:left;color:var(--accent-2);font-weight:700">Bulk Pixel Audit Results</caption>
+          <thead><tr><th scope="col">Title</th><th scope="col">Title Px</th><th scope="col">Desc Px</th><th scope="col">Status</th></tr></thead>
+          <tbody id="bulk-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <article class="content-section">
+    <h2>How Google SERP Truncation Affects Organic CTR</h2>
+    <p>When a search engine truncates your <code>&lt;title&gt;</code> tag with an ellipsis (<code>...</code>), your primary differentiator or brand hook gets cut off—pushing click-through rate down even when your page reaches positions 4–10. Across the Google Search Console audit of this domain, over half of informational pages previously shipped titles between 117 and 124 characters, causing Google to rewrite or clip titles mid-sentence.</p>
+    <h3>Desktop vs. Mobile Pixel Limits</h3>
+    <ul>
+      <li><strong>Desktop Title Limit (~580–600 px):</strong> Rendered in 20px Arial. Keep critical keywords inside the first 450px so brand suffixes don't force truncation.</li>
+      <li><strong>Desktop Meta Description (~920 px):</strong> Rendered in 14px Arial across two lines. Subtract ~100px if Google injects a publication date prefix.</li>
+      <li><strong>Mobile Meta Description (~680 px):</strong> Mobile cards wrap tighter; placing the primary benefit and proof point in the first 115 characters protects mobile CTR.</li>
+    </ul>
+    <h3>High-CTR Title Formula for Tools &amp; Guides</h3>
+    <p>Front-load the exact user query, add one concrete qualifier (<code>Free Tool</code>, <code>Checklist</code>, <code>Template</code>, or current year <code>2026</code>), and separate the short brand name with a pipe (<code>|</code>) or dash. Validate final markup alongside our <a href="schema-markup-generator" style="color:var(--accent-2)">JSON-LD Schema Generator</a> and <a href="dom-html-auditor" style="color:var(--accent-2)">DOM &amp; HTML Auditor</a>.</p>
+  </article>
+
+  <section class="faq-section" aria-label="Frequently Asked Questions">
+    <h2>SERP Preview FAQs</h2>
+    <details><summary>Why does pixel width matter more than character count for Google titles?</summary><p>Google truncates titles at roughly 580–600 pixels using a proportional font, not a fixed character limit. Wide uppercase letters consume far more horizontal space than narrow lowercase letters.</p></details>
+    <details><summary>What is the ideal meta description pixel width and length?</summary><p>Keep descriptions between 680 and 920 pixels (roughly 130–155 characters), with the main hook in the first 120 characters for mobile visibility.</p></details>
+    <details><summary>How does this SERP preview tool measure pixels without an API?</summary><p>It uses the native HTML5 Canvas 2D <code>measureText()</code> API locally inside your browser with Google SERP font weights (20px Arial and 14px Arial).</p></details>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="footer-grid"><div class="footer-brand"><a href="../" class="footer-logo">HighSoftware99</a><p>HighSoftware99 delivers technical SEO, local SEO, and free client-side SEO tools grounded in Semantic SEO.</p></div><div class="footer-col"><h4>Services</h4><ul><li><a href="../technical-seo/">Technical SEO</a></li><li><a href="../local-seo/">Local SEO</a></li><li><a href="../on-page-seo">On-Page SEO</a></li><li><a href="../ecommerce-seo">E-Commerce SEO</a></li></ul></div><div class="footer-col"><h4>Free Tools</h4><ul><li><a href="serp-preview-tool">SERP Pixel Checker</a></li><li><a href="schema-markup-generator">Schema Generator</a></li><li><a href="dom-html-auditor">DOM &amp; HTML Auditor</a></li><li><a href="robots-llms-txt-generator">robots.txt &amp; llms.txt</a></li><li><a href="redirect-rule-generator">Bulk 301 Generator</a></li></ul></div><div class="footer-col"><h4>Guides</h4><ul><li><a href="../on-page-seo-checklist">On-Page Checklist</a></li><li><a href="../technical-seo-guide">Technical SEO Guide</a></li><li><a href="../blog">All Blog Guides</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 HighSoftware99. All rights reserved.</p><p>seo-byhighsoftware99.com &middot; <span class="keyword">Instant Appear by SEO by HighSoftware99</span></p></div></footer>
+
+<script>
+(function(){
+  var canvas=document.createElement('canvas'),ctx=canvas.getContext('2d');
+  function pxWidth(text,font){ctx.font=font;return Math.round(ctx.measureText(text||'').width);}
+  function truncatePx(text,font,maxPx){
+    if(pxWidth(text,font)<=maxPx)return text;
+    var words=text.split(/\s+/),out='';
+    for(var i=0;i<words.length;i++){
+      var next=out?out+' '+words[i]:words[i];
+      if(pxWidth(next+' ...',font)>maxPx)break;
+      out=next;
+    }
+    if(!out){
+      var s=text;while(s.length>1&&pxWidth(s+'...',font)>maxPx)s=s.slice(0,-1);
+      return s+'...';
+    }
+    return out+' ...';
+  }
+  function escHtml(s){return String(s).replace(/[&<>"']/g,function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m];});}
+  var sTitle=document.getElementById('s-title'),sDesc=document.getElementById('s-desc'),sUrl=document.getElementById('s-url'),sKw=document.getElementById('s-keyword');
+  var optDate=document.getElementById('opt-date'),optRating=document.getElementById('opt-rating');
+  var serpBox=document.getElementById('serp-box'),tabD=document.getElementById('tab-desktop'),tabM=document.getElementById('tab-mobile');
+  var mode='desktop';
+
+  function update(){
+    var t=sTitle.value.trim(),d=sDesc.value.trim(),u=sUrl.value.trim()||'https://example.com',kw=sKw.value.trim().toLowerCase();
+    var tLimit=mode==='desktop'?580:560,dLimit=mode==='desktop'?920:680;
+    var tFont=mode==='desktop'?'400 20px Arial,sans-serif':'400 18px Arial,sans-serif',dFont='400 14px Arial,sans-serif';
+    var tPx=pxWidth(t,tFont),dPx=pxWidth((optDate.checked?'Nov 10, 2026 — ':'')+d,dFont);
+
+    document.getElementById('t-chars').textContent=t.length+' chars';
+    var tPxEl=document.getElementById('t-px');
+    tPxEl.textContent=tPx+' / '+tLimit+' px';
+    tPxEl.className='stat-badge '+(tPx===0?'warn':tPx<=tLimit&&tPx>=280?'good':tPx<280?'warn':'bad');
+    var mT=document.getElementById('m-title');
+    mT.style.width=Math.min(100,Math.round(tPx/tLimit*100))+'%';
+    mT.style.background=tPx<=tLimit?'var(--accent-ok)':'var(--accent-bad)';
+
+    document.getElementById('d-chars').textContent=d.length+' chars';
+    var dPxEl=document.getElementById('d-px');
+    dPxEl.textContent=dPx+' / '+dLimit+' px';
+    dPxEl.className='stat-badge '+(dPx===0?'warn':dPx<=dLimit&&dPx>=500?'good':dPx<500?'warn':'bad');
+    var mD=document.getElementById('m-desc');
+    mD.style.width=Math.min(100,Math.round(dPx/dLimit*100))+'%';
+    mD.style.background=dPx<=dLimit?'var(--accent-ok)':'var(--accent-bad)';
+
+    try{
+      var parsed=new URL(u);
+      document.getElementById('p-site').textContent=parsed.hostname;
+      document.getElementById('p-fav').textContent=(parsed.hostname.charAt(0)||'S').toUpperCase();
+      var parts=parsed.pathname.split('/').filter(Boolean);
+      document.getElementById('p-crumb').textContent=parsed.origin+(parts.length?' › '+parts.join(' › '):'');
+    }catch{
+      document.getElementById('p-site').textContent='example.com';
+      document.getElementById('p-crumb').textContent=u;
+    }
+
+    document.getElementById('p-date').hidden=!optDate.checked;
+    document.getElementById('p-rich').hidden=!optRating.checked;
+    document.getElementById('p-title').textContent=truncatePx(t||'Untitled Page',tFont,tLimit);
+
+    var descPrev=truncatePx(d||'Add a compelling meta description...',dFont,optDate.checked?dLimit-105:dLimit);
+    if(kw){
+      var safeKw=kw.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+      document.getElementById('p-desc').innerHTML=escHtml(descPrev).replace(new RegExp('('+safeKw+')','gi'),'<strong>$1</strong>');
+    }else{
+      document.getElementById('p-desc').textContent=descPrev;
+    }
+
+    document.getElementById('meta-output').textContent='<title>'+t+'</title>\n<meta name="description" content="'+d.replace(/"/g,'&quot;')+'">\n<link rel="canonical" href="'+u+'">';
+
+    var checks=[];
+    checks.push(['Title fits without truncation',tPx>0&&tPx<=tLimit,'OK ('+tPx+'px)','Truncated (+'+(tPx-tLimit)+'px)']);
+    checks.push(['Meta description fits without truncation',dPx>0&&dPx<=dLimit,'OK ('+dPx+'px)','Truncated (+'+(dPx-dLimit)+'px)']);
+    if(kw){
+      var inT=t.toLowerCase().indexOf(kw)!==-1,frontT=t.toLowerCase().indexOf(kw)===0||t.toLowerCase().indexOf(kw)<=25;
+      checks.push(['Keyword present in title',inT,frontT?'Front-loaded':'Present','Missing']);
+      checks.push(['Keyword present in description',d.toLowerCase().indexOf(kw)!==-1,'Present (bolded in SERP)','Missing']);
+    }
+    checks.push(['CTR hook (year, number, or bracket)',/\b(202[5-9]|free|guide|checklist|tool|fast|\d+)\b/i.test(t),'Strong hook detected','Consider adding year/benefit']);
+    document.getElementById('ctr-checks').innerHTML=checks.map(function(c){
+      return '<li><span>'+c[0]+'</span><span class="'+(c[1]?'good':'warn')+'">'+(c[1]?c[2]:c[3])+'</span></li>';
+    }).join('');
+  }
+
+  function runBulk(){
+    var lines=document.getElementById('bulk-input').value.split(/\r?\n/).filter(function(l){return l.trim();});
+    var rows=lines.map(function(line){
+      var parts=line.split('|');
+      var desc=parts.length>1?parts.pop().trim():'';
+      var title=parts.join('|').trim();
+      var tp=pxWidth(title,'400 20px Arial,sans-serif'),dp=pxWidth(desc,'400 14px Arial,sans-serif');
+      var ok=tp>0&&tp<=580&&dp>0&&dp<=920;
+      return '<tr><td>'+escHtml(title)+'</td><td class="'+(tp<=580?'good':'bad')+'">'+tp+' px</td><td class="'+(dp<=920?'good':'bad')+'">'+dp+' px</td><td class="'+(ok?'good':'warn')+'">'+(ok?'PASS':'FIX WIDTH')+'</td></tr>';
+    }).join('');
+    document.getElementById('bulk-tbody').innerHTML=rows;
+  }
+
+  [sTitle,sDesc,sUrl,sKw].forEach(function(el){el.addEventListener('input',update);});
+  [optDate,optRating].forEach(function(el){el.addEventListener('change',update);});
+  tabD.addEventListener('click',function(){mode='desktop';serpBox.classList.remove('mobile');tabD.setAttribute('aria-selected','true');tabM.setAttribute('aria-selected','false');update();});
+  tabM.addEventListener('click',function(){mode='mobile';serpBox.classList.add('mobile');tabM.setAttribute('aria-selected','true');tabD.setAttribute('aria-selected','false');update();});
+  document.getElementById('run-bulk-btn').addEventListener('click',runBulk);
+
+  var timers=new WeakMap(),lastMsg='';
+  function report(btn,ok){
+    var tip=btn.nextElementSibling;clearTimeout(timers.get(btn));
+    btn.removeAttribute('data-copied');btn.removeAttribute('data-failed');
+    var msg=ok?'Copied':'Copy failed';if(msg===lastMsg)msg+='\u00A0';lastMsg=msg;
+    tip.textContent='';void btn.offsetWidth;btn.setAttribute(ok?'data-copied':'data-failed','');
+    requestAnimationFrame(function(){tip.textContent=msg;});
+    timers.set(btn,setTimeout(function(){btn.removeAttribute('data-copied');btn.removeAttribute('data-failed');tip.textContent='';},2000));
+  }
+  async function copyEl(btn,target){
+    var text=target.innerText.trim();if(!text)return;
+    try{await navigator.clipboard.writeText(text);report(btn,true);}catch{report(btn,false);}
+  }
+  if('CommandEvent' in window){document.addEventListener('command',function(e){if(e.command==='--copy')copyEl(e.source,e.target);},true);}
+  else{document.addEventListener('click',function(e){var b=e.target.closest('button[command="--copy"]');if(b){var t=document.getElementById(b.getAttribute('commandfor'));if(t)copyEl(b,t);}});}
+
+  update();runBulk();
+  document.getElementById('nav-toggle').addEventListener('click',function(){var m=document.getElementById('nav-menu'),o=document.getElementById('nav-overlay');var isOpen=m.classList.toggle('open');o.classList.toggle('open',isOpen);this.setAttribute('aria-expanded',isOpen);});
+  document.getElementById('nav-overlay').addEventListener('click',function(){document.getElementById('nav-menu').classList.remove('open');this.classList.remove('open');document.getElementById('nav-toggle').setAttribute('aria-expanded','false');});
+  document.querySelectorAll('.has-dropdown > a').forEach(function(a){a.addEventListener('click',function(e){if(window.innerWidth<=768){e.preventDefault();this.parentElement.classList.toggle('open');}});});
+  window.addEventListener('load',function(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-BW37189SQ9';s.async=true;document.head.appendChild(s);s.onload=function(){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BW37189SQ9');};});
+})();
+</script>
+</body>
+</html>
+

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a0e1a">
+<title>Free JSON-LD Schema Markup Generator | HighSoftware99</title>
+<meta name="description" content="Generate valid JSON-LD structured data for LocalBusiness, FAQPage, Article, Product, SoftwareApplication, and BreadcrumbList with instant syntax validation.">
+<meta name="keywords" content="JSON-LD schema generator, FAQ schema generator, LocalBusiness schema markup, Product schema generator, HighSoftware99">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://seo-byhighsoftware99.com/tools/schema-markup-generator">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"HighSoftware99 JSON-LD Schema Markup Generator","applicationCategory":"DeveloperApplication","operatingSystem":"Web","url":"https://seo-byhighsoftware99.com/tools/schema-markup-generator","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@id":"https://seo-byhighsoftware99.com/#organization"},"description":"Client-side JSON-LD generator supporting LocalBusiness, Article, FAQPage, Product, SoftwareApplication, and BreadcrumbList schema markup."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"SEO by HighSoftware99","item":"https://seo-byhighsoftware99.com/"},{"@type":"ListItem","position":2,"name":"Free SEO Tools","item":"https://seo-byhighsoftware99.com/tools/"},{"@type":"ListItem","position":3,"name":"Schema Markup Generator","item":"https://seo-byhighsoftware99.com/tools/schema-markup-generator"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which Schema.org format does Google recommend in 2026?","acceptedAnswer":{"@type":"Answer","text":"Google recommends JSON-LD placed inside a <script type=\"application/ld+json\"> tag in the <head> or <body> rather than inline Microdata or RDFa, because JSON-LD separates structured entity signals from layout markup."}},{"@type":"Question","name":"Why should free web tools include a $0 Offer inside SoftwareApplication schema?","acceptedAnswer":{"@type":"Answer","text":"Adding an Offer with price \"0\" and priceCurrency \"USD\" prevents Google Search Console from flagging missing price warnings on SoftwareApplication rich results."}},{"@type":"Question","name":"Can I combine multiple schema types on one page?","acceptedAnswer":{"@type":"Answer","text":"Yes. Use a single JSON-LD @graph array to connect Organization, Article, FAQPage, and BreadcrumbList entities using @id references so search engines parse one unified entity graph."}}]}]}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--bg-primary:#0a0e1a;--bg-secondary:#0f1320;--bg-card:#1a1f35;--accent-1:#6366f1;--accent-2:#818cf8;--accent-3:#a78bfa;--accent-ok:#34d399;--accent-warn:#fbbf24;--text-primary:#f1f5f9;--text-secondary:#a0aec0;--text-muted:#8b95a8;--border:#1e293b;--radius:12px;--font:'Inter',system-ui,-apple-system,sans-serif;--mono:'Fira Code',monospace}html{font-size:16px;scroll-behavior:smooth}body{font-family:var(--font);background:var(--bg-primary);color:var(--text-primary);line-height:1.7;-webkit-font-smoothing:antialiased}
+.skip-link{position:absolute;top:-100%;left:50%;transform:translateX(-50%);background:var(--accent-1);color:#fff;padding:.75rem 1.5rem;border-radius:0 0 8px 8px;font-weight:700;font-size:.9rem;z-index:9999;text-decoration:none}.skip-link:focus{top:0}*:focus-visible{outline:2px solid var(--accent-2);outline-offset:2px;border-radius:4px}
+.site-header{position:sticky;top:0;z-index:100;background:rgba(10,14,26,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}.nav-inner{max-width:1200px;margin:0 auto;padding:.65rem 2rem;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}.brand-mark{background:linear-gradient(135deg,var(--accent-1),var(--accent-3));color:#fff;font-weight:900;font-size:.7rem;padding:.3rem .55rem;border-radius:6px}.brand-name{font-weight:700;font-size:.9rem;color:var(--text-primary)}.brand-name span{color:var(--accent-2)}.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:.5rem;flex-direction:column;gap:4px;min-width:44px;min-height:44px;align-items:center;justify-content:center}.nav-toggle span{display:block;width:20px;height:2px;background:var(--text-primary);border-radius:2px}.nav-links{list-style:none;display:flex;align-items:center;gap:.15rem}.nav-links>li{position:relative}.nav-links>li>a{color:var(--text-secondary);text-decoration:none;font-size:.8rem;font-weight:500;padding:.45rem .7rem;border-radius:8px;display:flex;align-items:center;gap:.3rem}.nav-links>li>a:hover{color:var(--text-primary);background:rgba(99,102,241,.08)}.nav-cta{background:linear-gradient(135deg,var(--accent-1),var(--accent-3))!important;color:#fff!important;font-weight:600!important;padding:.45rem 1.1rem!important;border-radius:8px!important}.caret{display:inline-block;width:4px;height:4px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg)}.dropdown{position:absolute;top:calc(100% + 4px);left:0;min-width:210px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:.4rem;list-style:none;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s;box-shadow:0 8px 32px rgba(0,0,0,.35)}.has-dropdown:hover .dropdown,.has-dropdown:focus-within .dropdown{opacity:1;visibility:visible;transform:translateY(0)}.dropdown a{display:block;padding:.4rem .7rem;color:var(--text-secondary);text-decoration:none;font-size:.8rem;border-radius:6px}.dropdown a:hover{color:var(--text-primary);background:rgba(99,102,241,.1)}
+.breadcrumb{max-width:1060px;margin:0 auto;padding:.85rem 2rem 0}.breadcrumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:.35rem;font-size:.78rem;color:var(--text-muted)}.breadcrumb li+li::before{content:'›';margin-right:.35rem}.breadcrumb a{color:var(--accent-2);text-decoration:none}
+.hero{padding:2rem 2rem 1.25rem;text-align:center}.hero h1{font-size:clamp(1.7rem,4vw,2.5rem);font-weight:900;letter-spacing:-.03em;margin-bottom:.6rem}.hero h1 .hl{background:linear-gradient(135deg,var(--accent-1),var(--accent-ok));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.hero .subtitle{font-size:1rem;color:var(--text-secondary);max-width:680px;margin:0 auto}
+.workspace{max-width:1060px;margin:1rem auto 2.5rem;padding:0 2rem;display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start}
+.panel{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem}.panel h2{font-size:1.05rem;font-weight:800;margin-bottom:1rem}
+.field{display:flex;flex-direction:column;gap:.3rem;margin-bottom:.9rem}.field label{font-size:.78rem;font-weight:700;color:var(--text-secondary)}
+.field input,.field select,.field textarea{width:100%;min-height:48px;padding:.65rem .9rem;border-radius:8px;border:1px solid var(--border);background:var(--bg-primary);color:var(--text-primary);font:inherit;font-size:max(1rem,1em)}.field textarea{min-height:76px;resize:vertical}
+.row-2{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.item-card{background:var(--bg-secondary);border:1px solid var(--border);border-radius:8px;padding:.85rem;margin-bottom:.65rem}.btn{min-height:42px;padding:.5rem 1rem;border-radius:8px;border:1px solid var(--border);background:var(--bg-secondary);color:var(--text-primary);font:inherit;font-size:.82rem;font-weight:600;cursor:pointer}.btn-primary{background:linear-gradient(135deg,var(--accent-1),var(--accent-3));border:none;color:#fff}
+.status-bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;margin-bottom:.75rem;padding:.55rem .85rem;background:var(--bg-secondary);border-radius:8px;border:1px solid var(--border);font-size:.8rem}.good{color:var(--accent-ok);font-weight:700}
+.code-wrap{position:relative;background:var(--bg-primary);border:1px solid var(--border);border-radius:8px;padding:1rem}.code-wrap pre{overflow-x:auto;max-height:460px;padding-inline-end:3.5rem;font-family:var(--mono);font-size:.78rem;color:#c7d2fe;line-height:1.55}
+.copy{position:absolute;inset-block-start:.65rem;inset-inline-end:.65rem;display:inline-flex;align-items:center;gap:.4rem}.copy-button{min-inline-size:32px;min-block-size:32px;padding:.3rem .65rem;border-radius:6px;border:1px solid var(--border);background:var(--bg-card);color:var(--text-primary);font:inherit;font-size:.74rem;font-weight:600;cursor:pointer}.tip{font-size:.72rem;color:var(--accent-ok);opacity:0;transition:opacity .15s}.copy-button[data-copied]+.tip,.copy-button[data-failed]+.tip{opacity:1}
+.content-section{max-width:860px;margin:0 auto;padding:1.5rem 2rem}.content-section h2{font-size:1.55rem;font-weight:800;margin-bottom:.9rem}.content-section h3{font-size:1.15rem;font-weight:700;margin:1.35rem 0 .6rem}.content-section p,.content-section li{color:var(--text-secondary);margin-bottom:.95rem}.content-section ul{padding-left:1.35rem}
+.faq-section{max-width:860px;margin:1.5rem auto 2rem;padding:0 2rem}.faq-section h2{font-size:1.45rem;font-weight:800;margin-bottom:1rem}.faq-section details{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:.65rem}.faq-section summary{padding:.9rem 1.2rem;cursor:pointer;font-weight:700;font-size:.92rem}.faq-section details p{padding:.25rem 1.2rem 1rem;color:var(--text-secondary);font-size:.88rem}
+.site-footer{border-top:1px solid var(--border);background:var(--bg-secondary);margin-top:3rem}.footer-grid{max-width:1200px;margin:0 auto;padding:3rem 2rem 2rem;display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:2.5rem}.footer-brand .footer-logo{font-weight:800;font-size:1.1rem;color:var(--accent-2);text-decoration:none;display:block;margin-bottom:.75rem}.footer-brand p{font-size:.82rem;color:var(--text-muted);line-height:1.7}.footer-col h4{font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-muted);margin-bottom:.75rem;font-weight:600}.footer-col ul{list-style:none}.footer-col li{margin-bottom:.35rem}.footer-col a{color:var(--text-secondary);text-decoration:none;font-size:.82rem}.footer-bottom{max-width:1200px;margin:0 auto;padding:1.25rem 2rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}.footer-bottom p{color:var(--text-muted);font-size:.72rem}.footer-bottom .keyword{color:var(--accent-3);font-weight:600}
+@media(max-width:880px){.workspace{grid-template-columns:1fr}.row-2{grid-template-columns:1fr}}
+@media(max-width:768px){.nav-toggle{display:flex}.nav-menu{position:fixed;top:0;right:-300px;width:280px;height:100vh;background:var(--bg-primary);border-left:1px solid var(--border);padding:4rem 1.5rem 2rem;transition:right .3s;z-index:200;overflow-y:auto}.nav-menu.open{right:0}.nav-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:150}.nav-overlay.open{display:block}.nav-links{flex-direction:column;align-items:stretch;gap:0}.nav-links>li>a{padding:.7rem .5rem;font-size:.9rem}.dropdown{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:none;background:transparent;padding:0 0 .5rem 1rem;display:none}.has-dropdown.open .dropdown{display:block}.footer-grid{grid-template-columns:1fr 1fr;gap:2rem}}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<header class="site-header"><nav class="nav-inner" aria-label="Primary"><a href="../" class="brand"><span class="brand-mark">HS99</span><span class="brand-name">SEO by <span>HighSoftware99</span></span></a><button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button><div class="nav-overlay" id="nav-overlay"></div><div class="nav-menu" id="nav-menu"><ul class="nav-links"><li class="has-dropdown"><a href="../technical-seo/" aria-haspopup="true">Services <span class="caret" aria-hidden="true"></span></a><ul class="dropdown"><li><a href="../technical-seo/">Technical SEO</a></li><li><a href="../local-seo/">Local SEO</a></li><li><a href="../on-page-seo">On-Page SEO</a></li><li><a href="../off-page-seo">Off-Page SEO</a></li><li><a href="../ecommerce-seo">E-Commerce SEO</a></li><li><a href="../youtube-seo">YouTube SEO</a></li></ul></li><li class="has-dropdown"><a href="../locations/" aria-haspopup="true">Locations <span class="caret" aria-hidden="true"></span></a><ul class="dropdown"><li><a href="../locations/">All Service Locations</a></li><li><a href="../seo-new-york">SEO New York</a></li><li><a href="../seo-los-angeles">SEO Los Angeles</a></li><li><a href="../seo-chicago">SEO Chicago</a></li><li><a href="../seo-houston">SEO Houston</a></li></ul></li><li><a href="../tools/">Tools</a></li><li><a href="../blog">Blog</a></li><li><a href="../about">About</a></li><li><a href="../pricing">Pricing</a></li><li><a href="../contact" class="nav-cta">Get Audit</a></li></ul></div></nav></header>
+
+<main id="main-content">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="../">Home</a></li><li><a href="./">Free SEO Tools</a></li><li aria-current="page">Schema Markup Generator</li></ol></nav>
+  <section class="hero" aria-label="JSON-LD Schema Generator">
+    <h1>JSON-LD <span class="hl">Schema Markup</span> Generator</h1>
+    <p class="subtitle">Generate clean, validated Schema.org JSON-LD for LocalBusiness, FAQPage, Article, Product, SoftwareApplication, and BreadcrumbList—no login required.</p>
+  </section>
+
+  <section class="workspace" aria-label="Interactive Schema Builder">
+    <div class="panel">
+      <h2>1. Configure Schema Type</h2>
+      <div class="field">
+        <label for="schema-type">Select Schema.org Type</label>
+        <select id="schema-type">
+          <option value="LocalBusiness">LocalBusiness / ProfessionalService</option>
+          <option value="FAQPage">FAQPage (Rich Dropdowns &amp; AI Overviews)</option>
+          <option value="Article">Article / TechArticle</option>
+          <option value="Product">Product + Offer + AggregateRating</option>
+          <option value="SoftwareApplication">SoftwareApplication (Free or Paid Tool)</option>
+          <option value="BreadcrumbList">BreadcrumbList</option>
+        </select>
+      </div>
+      <div id="dynamic-fields"></div>
+    </div>
+
+    <div class="panel">
+      <h2>2. Validated JSON-LD Script Output</h2>
+      <div class="status-bar">
+        <span id="json-valid" class="good">&#10003; Valid JSON-LD Syntax</span>
+        <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener noreferrer" style="color:var(--accent-2);text-decoration:none;font-weight:600;">Open Rich Results Test &nearr;</a>
+      </div>
+      <div class="code-wrap">
+        <span class="copy">
+          <button type="button" class="copy-button" command="--copy" commandfor="schema-output" aria-label="Copy JSON-LD script block">Copy Script</button>
+          <span class="tip" role="status"></span>
+        </span>
+        <pre role="region" aria-label="Generated JSON-LD output" tabindex="0"><code id="schema-output"></code></pre>
+      </div>
+    </div>
+  </section>
+
+  <article class="content-section">
+    <h2>Structured Data Engineering for Google Search &amp; AI Citations</h2>
+    <p>Search engines and generative answer engines extract entities far more reliably when HTML copy is backed by deterministic JSON-LD structured data. Rather than leaving entity types ambiguous, explicit Schema.org graphs tell Googlebot what your business does, where it operates, what questions a page answers, and whether a web tool is free (<code>price: "0"</code>).</p>
+    <h3>Key Schema Rules to Prevent Search Console Warnings</h3>
+    <ul>
+      <li><strong>Match visible page content:</strong> Only include <code>FAQPage</code> questions or <code>AggregateRating</code> scores that actually appear visibly in the HTML body.</li>
+      <li><strong>Include explicit <code>offers</code> on Software &amp; Products:</strong> Omitting <code>price</code> and <code>priceCurrency</code> triggers missing-field Product Snippet warnings in Search Console.</li>
+      <li><strong>Use absolute canonical URLs:</strong> Always point <code>url</code>, <code>item</code>, and <code>mainEntityOfPage</code> to the exact extensionless canonical URL.</li>
+    </ul>
+    <p>Pair generated markup with our <a href="serp-preview-tool" style="color:var(--accent-2)">SERP Pixel Checker</a> and audit existing pages using the <a href="dom-html-auditor" style="color:var(--accent-2)">DOM &amp; HTML Auditor</a>.</p>
+  </article>
+
+  <section class="faq-section" aria-label="Schema Generator FAQs">
+    <h2>JSON-LD Schema FAQs</h2>
+    <details><summary>Which Schema.org format does Google recommend in 2026?</summary><p>Google recommends JSON-LD placed inside a <code>&lt;script type="application/ld+json"&gt;</code> tag because it stays cleanly separated from visual DOM structure.</p></details>
+    <details><summary>Why should free web tools include a $0 Offer inside SoftwareApplication schema?</summary><p>Explicitly marking <code>"price": "0"</code> and <code>"priceCurrency": "USD"</code> qualifies your tool as free software and prevents Search Console snippet warnings.</p></details>
+    <details><summary>Can I combine multiple schema types on one page?</summary><p>Yes—place multiple schema objects inside an <code>"@graph": [...]</code> array linked via shared <code>@id</code> URIs.</p></details>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="footer-grid"><div class="footer-brand"><a href="../" class="footer-logo">HighSoftware99</a><p>HighSoftware99 delivers technical SEO, local SEO, and free client-side SEO tools grounded in Semantic SEO.</p></div><div class="footer-col"><h4>Services</h4><ul><li><a href="../technical-seo/">Technical SEO</a></li><li><a href="../local-seo/">Local SEO</a></li><li><a href="../on-page-seo">On-Page SEO</a></li><li><a href="../ecommerce-seo">E-Commerce SEO</a></li></ul></div><div class="footer-col"><h4>Free Tools</h4><ul><li><a href="serp-preview-tool">SERP Pixel Checker</a></li><li><a href="schema-markup-generator">Schema Generator</a></li><li><a href="dom-html-auditor">DOM &amp; HTML Auditor</a></li><li><a href="robots-llms-txt-generator">robots.txt &amp; llms.txt</a></li><li><a href="redirect-rule-generator">Bulk 301 Generator</a></li></ul></div><div class="footer-col"><h4>Guides</h4><ul><li><a href="../ecommerce-seo-guide">E-Commerce SEO Guide</a></li><li><a href="../local-seo-guide">Local SEO Guide</a></li><li><a href="../blog">All Blog Guides</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 HighSoftware99. All rights reserved.</p><p>seo-byhighsoftware99.com &middot; <span class="keyword">Instant Appear by SEO by HighSoftware99</span></p></div></footer>
+
+<script>
+(function(){
+  var typeSel=document.getElementById('schema-type'),fieldsEl=document.getElementById('dynamic-fields'),outEl=document.getElementById('schema-output'),validEl=document.getElementById('json-valid');
+  var faqItems=[{q:'How long does technical SEO take to show results?',a:'Crawl and indexing updates appear within 2 to 4 weeks once canonicals and TTFB bottlenecks are fixed.'},{q:'What is Cost of Retrieval in SEO?',a:'Cost of Retrieval is the CPU, bandwidth, and rendering work search crawlers spend to fetch and parse a page.'}];
+  var crumbs=[{name:'Home',url:'https://seo-byhighsoftware99.com/'},{name:'Tools',url:'https://seo-byhighsoftware99.com/tools/'},{name:'Schema Generator',url:'https://seo-byhighsoftware99.com/tools/schema-markup-generator'}];
+
+  function inp(id,label,val,type){return '<div class="field"><label for="'+id+'">'+label+'</label><input type="'+(type||'text')+'" id="'+id+'" value="'+String(val).replace(/"/g,'&quot;')+'"></div>';}
+  function renderForm(){
+    var t=typeSel.value,h='';
+    if(t==='LocalBusiness'){
+      h=inp('lb-name','Business Name','HighSoftware99 SEO Agency')+inp('lb-url','Website URL','https://seo-byhighsoftware99.com/','url')+
+        '<div class="row-2">'+inp('lb-tel','Phone','+1-212-555-0199','tel')+inp('lb-area','Area / City Served','New York, NY')+'</div>'+
+        inp('lb-street','Street Address','350 Fifth Avenue')+
+        '<div class="row-2">'+inp('lb-city','City','New York')+inp('lb-state','State / Postal','NY 10118')+'</div>'+
+        inp('lb-same','SameAs Profile URL (optional)','https://github.com/HammadiOS/seo-byhighsoftware99.com','url');
+    }else if(t==='Article'){
+      h=inp('ar-head','Article Headline','Technical SEO Audit Guide: Core Web Vitals & DOM Efficiency')+
+        inp('ar-url','Article Canonical URL','https://seo-byhighsoftware99.com/technical-seo-guide','url')+
+        '<div class="row-2">'+inp('ar-author','Author Name','Hammad Ahmad')+inp('ar-pub','Publisher Name','HighSoftware99')+'</div>'+
+        '<div class="row-2">'+inp('ar-dp','Date Published','2026-09-01','date')+inp('ar-dm','Date Modified','2026-11-10','date')+'</div>'+
+        inp('ar-img','Featured Image URL','https://seo-byhighsoftware99.com/images/seo-framework-hero.png','url');
+    }else if(t==='Product'){
+      h=inp('pr-name','Product Name','Enterprise Technical SEO Audit')+
+        '<div class="row-2">'+inp('pr-brand','Brand','HighSoftware99')+inp('pr-sku','SKU','HS99-AUDIT-01')+'</div>'+
+        '<div class="row-2">'+inp('pr-price','Price','499')+inp('pr-curr','Currency (ISO 4217)','USD')+'</div>'+
+        '<div class="row-2">'+inp('pr-rate','Rating (1–5)','4.9')+inp('pr-cnt','Review Count','34')+'</div>'+
+        inp('pr-url','Product URL','https://seo-byhighsoftware99.com/pricing','url');
+    }else if(t==='SoftwareApplication'){
+      h=inp('sw-name','Tool / App Name','SERP Title & Meta Pixel Checker')+
+        '<div class="row-2">'+inp('sw-cat','Application Category','WebApplication')+inp('sw-os','Operating System','Web')+'</div>'+
+        '<div class="row-2">'+inp('sw-price','Price (0 for free)','0')+inp('sw-curr','Currency','USD')+'</div>'+
+        inp('sw-url','Tool URL','https://seo-byhighsoftware99.com/tools/serp-preview-tool','url')+
+        inp('sw-desc','Short Description','Browser-native Google SERP pixel width simulator with bulk title checking.');
+    }else if(t==='FAQPage'){
+      h=faqItems.map(function(it,i){
+        return '<div class="item-card"><div class="field"><label for="fq-'+i+'">Question '+(i+1)+'</label><input id="fq-'+i+'" data-fi="'+i+'" data-k="q" value="'+it.q.replace(/"/g,'&quot;')+'"></div><div class="field"><label for="fa-'+i+'">Answer '+(i+1)+'</label><textarea id="fa-'+i+'" data-fi="'+i+'" data-k="a">'+it.a+'</textarea></div>'+(faqItems.length>1?'<button type="button" class="btn" data-del-faq="'+i+'">Remove</button>':'')+'</div>';
+      }).join('')+'<button type="button" class="btn btn-primary" id="add-faq-btn">+ Add Question</button>';
+    }else if(t==='BreadcrumbList'){
+      h=crumbs.map(function(c,i){
+        return '<div class="item-card"><div class="row-2"><div class="field"><label for="cn-'+i+'">Label '+(i+1)+'</label><input id="cn-'+i+'" data-ci="'+i+'" data-k="name" value="'+c.name.replace(/"/g,'&quot;')+'"></div><div class="field"><label for="cu-'+i+'">URL '+(i+1)+'</label><input id="cu-'+i+'" data-ci="'+i+'" data-k="url" value="'+c.url.replace(/"/g,'&quot;')+'"></div></div>'+(crumbs.length>1?'<button type="button" class="btn" data-del-crumb="'+i+'">Remove</button>':'')+'</div>';
+      }).join('')+'<button type="button" class="btn btn-primary" id="add-crumb-btn">+ Add Crumb</button>';
+    }
+    fieldsEl.innerHTML=h;
+    fieldsEl.querySelectorAll('input,textarea').forEach(function(el){
+      el.addEventListener('input',function(){
+        if(el.hasAttribute('data-fi'))faqItems[+el.getAttribute('data-fi')][el.getAttribute('data-k')]=el.value;
+        if(el.hasAttribute('data-ci'))crumbs[+el.getAttribute('data-ci')][el.getAttribute('data-k')]=el.value;
+        buildJSON();
+      });
+    });
+    fieldsEl.querySelectorAll('[data-del-faq]').forEach(function(b){b.addEventListener('click',function(){faqItems.splice(+b.getAttribute('data-del-faq'),1);renderForm();buildJSON();});});
+    fieldsEl.querySelectorAll('[data-del-crumb]').forEach(function(b){b.addEventListener('click',function(){crumbs.splice(+b.getAttribute('data-del-crumb'),1);renderForm();buildJSON();});});
+    var af=document.getElementById('add-faq-btn');if(af)af.addEventListener('click',function(){faqItems.push({q:'New Question?',a:'Concise factual answer.'});renderForm();buildJSON();});
+    var ac=document.getElementById('add-crumb-btn');if(ac)ac.addEventListener('click',function(){crumbs.push({name:'Page Name',url:'https://seo-byhighsoftware99.com/page'});renderForm();buildJSON();});
+  }
+
+  function v(id){var e=document.getElementById(id);return e?e.value.trim():'';}
+  function buildJSON(){
+    var t=typeSel.value,obj={'@context':'https://schema.org'};
+    if(t==='LocalBusiness'){
+      obj['@type']='LocalBusiness';obj.name=v('lb-name');obj.url=v('lb-url');
+      if(v('lb-tel'))obj.telephone=v('lb-tel');if(v('lb-area'))obj.areaServed=v('lb-area');
+      obj.address={'@type':'PostalAddress',streetAddress:v('lb-street'),addressLocality:v('lb-city'),addressRegion:v('lb-state')};
+      if(v('lb-same'))obj.sameAs=[v('lb-same')];
+    }else if(t==='Article'){
+      obj['@type']='Article';obj.headline=v('ar-head');obj.mainEntityOfPage=v('ar-url');
+      obj.author={'@type':'Person',name:v('ar-author')};
+      obj.publisher={'@type':'Organization',name:v('ar-pub')};
+      obj.datePublished=v('ar-dp');obj.dateModified=v('ar-dm');
+      if(v('ar-img'))obj.image=v('ar-img');
+    }else if(t==='Product'){
+      obj['@type']='Product';obj.name=v('pr-name');obj.brand={'@type':'Brand',name:v('pr-brand')};obj.sku=v('pr-sku');
+      obj.offers={'@type':'Offer',url:v('pr-url'),priceCurrency:v('pr-curr')||'USD',price:v('pr-price')||'0',availability:'https://schema.org/InStock'};
+      if(v('pr-rate')&&v('pr-cnt'))obj.aggregateRating={'@type':'AggregateRating',ratingValue:v('pr-rate'),reviewCount:v('pr-cnt')};
+    }else if(t==='SoftwareApplication'){
+      obj['@type']='SoftwareApplication';obj.name=v('sw-name');obj.applicationCategory=v('sw-cat');obj.operatingSystem=v('sw-os');obj.url=v('sw-url');obj.description=v('sw-desc');
+      obj.offers={'@type':'Offer',price:v('sw-price')||'0',priceCurrency:v('sw-curr')||'USD'};
+    }else if(t==='FAQPage'){
+      obj['@type']='FAQPage';
+      obj.mainEntity=faqItems.filter(function(i){return i.q&&i.a;}).map(function(i){return {'@type':'Question',name:i.q,acceptedAnswer:{'@type':'Answer',text:i.a}};});
+    }else if(t==='BreadcrumbList'){
+      obj['@type']='BreadcrumbList';
+      obj.itemListElement=crumbs.filter(function(c){return c.name&&c.url;}).map(function(c,idx){return {'@type':'ListItem',position:idx+1,name:c.name,item:c.url};});
+    }
+    var jsonStr=JSON.stringify(obj,null,2);
+    try{JSON.parse(jsonStr);validEl.textContent='✓ Valid JSON-LD Syntax ('+jsonStr.length+' bytes)';}
+    catch(e){validEl.textContent='Invalid JSON: '+e.message;}
+    outEl.textContent='<script type="application/ld+json">\n'+jsonStr+'\n<\/script>';
+  }
+
+  typeSel.addEventListener('change',function(){renderForm();buildJSON();});
+  renderForm();buildJSON();
+
+  var timers=new WeakMap(),lastMsg='';
+  function report(btn,ok){
+    var tip=btn.nextElementSibling;clearTimeout(timers.get(btn));
+    btn.removeAttribute('data-copied');btn.removeAttribute('data-failed');
+    var msg=ok?'Copied':'Copy failed';if(msg===lastMsg)msg+='\u00A0';lastMsg=msg;
+    tip.textContent='';void btn.offsetWidth;btn.setAttribute(ok?'data-copied':'data-failed','');
+    requestAnimationFrame(function(){tip.textContent=msg;});
+    timers.set(btn,setTimeout(function(){btn.removeAttribute('data-copied');btn.removeAttribute('data-failed');tip.textContent='';},2000));
+  }
+  async function copyEl(btn,target){var text=target.innerText.trim();if(!text)return;try{await navigator.clipboard.writeText(text);report(btn,true);}catch{report(btn,false);}}
+  if('CommandEvent' in window){document.addEventListener('command',function(e){if(e.command==='--copy')copyEl(e.source,e.target);},true);}
+  else{document.addEventListener('click',function(e){var b=e.target.closest('button[command="--copy"]');if(b){var t=document.getElementById(b.getAttribute('commandfor'));if(t)copyEl(b,t);}});}
+  document.getElementById('nav-toggle').addEventListener('click',function(){var m=document.getElementById('nav-menu'),o=document.getElementById('nav-overlay');var isOpen=m.classList.toggle('open');o.classList.toggle('open',isOpen);this.setAttribute('aria-expanded',isOpen);});
+  document.getElementById('nav-overlay').addEventListener('click',function(){document.getElementById('nav-menu').classList.remove('open');this.classList.remove('open');document.getElementById('nav-toggle').setAttribute('aria-expanded','false');});
+  document.querySelectorAll('.has-dropdown > a').forEach(function(a){a.addEventListener('click',function(e){if(window.innerWidth<=768){e.preventDefault();this.parentElement.classList.toggle('open');}});});
+  window.addEventListener('load',function(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-BW37189SQ9';s.async=true;document.head.appendChild(s);s.onload=function(){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BW37189SQ9');};});
+})();
+</script>
+</body>
+</html>
+

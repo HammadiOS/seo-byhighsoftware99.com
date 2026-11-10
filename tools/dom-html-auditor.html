@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a0e1a">
+<title>DOM Size &amp; Semantic HTML5 Auditor | HighSoftware99</title>
+<meta name="description" content="Free client-side DOM node counter, nesting depth analyzer, semantic HTML5 landmark auditor, heading tree inspector, and JSON-LD syntax validator.">
+<meta name="keywords" content="DOM size checker, cost of retrieval SEO, semantic HTML5 auditor, heading hierarchy checker, JSON-LD validator, HighSoftware99">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://seo-byhighsoftware99.com/tools/dom-html-auditor">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"HighSoftware99 DOM Size & Semantic HTML5 Auditor","applicationCategory":"WebApplication","operatingSystem":"Web","url":"https://seo-byhighsoftware99.com/tools/dom-html-auditor","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@id":"https://seo-byhighsoftware99.com/#organization"},"description":"Client-side DOMParser HTML5 auditor calculating total DOM nodes, max nesting depth, max child count, semantic landmarks, H1-H6 heading outline, image CLS attributes, .html internal links, and JSON-LD schema syntax."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"SEO by HighSoftware99","item":"https://seo-byhighsoftware99.com/"},{"@type":"ListItem","position":2,"name":"Free SEO Tools","item":"https://seo-byhighsoftware99.com/tools/"},{"@type":"ListItem","position":3,"name":"DOM & HTML5 Auditor","item":"https://seo-byhighsoftware99.com/tools/dom-html-auditor"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Google's recommended DOM size limit for Cost of Retrieval and Core Web Vitals?","acceptedAnswer":{"@type":"Answer","text":"Google Lighthouse flags pages exceeding 800 total DOM nodes with a warning and fails above 1,400–1,500 nodes, depth greater than 32 levels, or a single parent element with more than 60 direct children."}},{"@type":"Question","name":"Why does DOMParser audit HTML accurately without a backend API?","acceptedAnswer":{"@type":"Answer","text":"The browser's native DOMParser().parseFromString(html, 'text/html') builds a real DOM tree locally, allowing exact traversal of node count, tree depth, HTML5 landmarks, heading outlines, meta tags, and embedded JSON-LD scripts."}},{"@type":"Question","name":"How can I audit external websites blocked by browser CORS policies?","acceptedAnswer":{"@type":"Answer","text":"You can paste View Source (Ctrl+U / Cmd+Opt+U), upload a saved .html file directly, or drag our zero-CORS Live Page Bookmarklet onto your bookmarks bar to run the exact same DOM analysis directly inside any open browser tab."}}]}]}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--bg-primary:#0a0e1a;--bg-secondary:#0f1320;--bg-card:#1a1f35;--accent-1:#6366f1;--accent-2:#818cf8;--accent-3:#a78bfa;--accent-ok:#34d399;--accent-warn:#fbbf24;--accent-bad:#f87171;--text-primary:#f1f5f9;--text-secondary:#a0aec0;--text-muted:#8b95a8;--border:#1e293b;--radius:12px;--font:'Inter',system-ui,-apple-system,sans-serif;--mono:'Fira Code',monospace}html{font-size:16px;scroll-behavior:smooth}body{font-family:var(--font);background:var(--bg-primary);color:var(--text-primary);line-height:1.7;-webkit-font-smoothing:antialiased}
+.skip-link{position:absolute;top:-100%;left:50%;transform:translateX(-50%);background:var(--accent-1);color:#fff;padding:.75rem 1.5rem;border-radius:0 0 8px 8px;font-weight:700;font-size:.9rem;z-index:9999;text-decoration:none}.skip-link:focus{top:0}*:focus-visible{outline:2px solid var(--accent-2);outline-offset:2px;border-radius:4px}
+.site-header{position:sticky;top:0;z-index:100;background:rgba(10,14,26,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}.nav-inner{max-width:1200px;margin:0 auto;padding:.65rem 2rem;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}.brand-mark{background:linear-gradient(135deg,var(--accent-1),var(--accent-3));color:#fff;font-weight:900;font-size:.7rem;padding:.3rem .55rem;border-radius:6px}.brand-name{font-weight:700;font-size:.9rem;color:var(--text-primary)}.brand-name span{color:var(--accent-2)}.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:.5rem;flex-direction:column;gap:4px;min-width:44px;min-height:44px;align-items:center;justify-content:center}.nav-toggle span{display:block;width:20px;height:2px;background:var(--text-primary);border-radius:2px}.nav-links{list-style:none;display:flex;align-items:center;gap:.15rem}.nav-links>li{position:relative}.nav-links>li>a{color:var(--text-secondary);text-decoration:none;font-size:.8rem;font-weight:500;padding:.45rem .7rem;border-radius:8px;display:flex;align-items:center;gap:.3rem}.nav-links>li>a:hover{color:var(--text-primary);background:rgba(99,102,241,.08)}.nav-cta{background:linear-gradient(135deg,var(--accent-1),var(--accent-3))!important;color:#fff!important;font-weight:600!important;padding:.45rem 1.1rem!important;border-radius:8px!important}.caret{display:inline-block;width:4px;height:4px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg)}.dropdown{position:absolute;top:calc(100% + 4px);left:0;min-width:210px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:.4rem;list-style:none;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s;box-shadow:0 8px 32px rgba(0,0,0,.35)}.has-dropdown:hover .dropdown,.has-dropdown:focus-within .dropdown{opacity:1;visibility:visible;transform:translateY(0)}.dropdown a{display:block;padding:.4rem .7rem;color:var(--text-secondary);text-decoration:none;font-size:.8rem;border-radius:6px}.dropdown a:hover{color:var(--text-primary);background:rgba(99,102,241,.1)}
+.breadcrumb{max-width:1120px;margin:0 auto;padding:.85rem 2rem 0}.breadcrumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:.35rem;font-size:.78rem;color:var(--text-muted)}.breadcrumb li+li::before{content:'›';margin-right:.35rem}.breadcrumb a{color:var(--accent-2);text-decoration:none}
+.hero{padding:2rem 2rem 1.25rem;text-align:center}.hero h1{font-size:clamp(1.7rem,4vw,2.5rem);font-weight:900;letter-spacing:-.03em;margin-bottom:.6rem}.hero h1 .hl{background:linear-gradient(135deg,var(--accent-1),var(--accent-ok));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.hero .subtitle{font-size:1rem;color:var(--text-secondary);max-width:740px;margin:0 auto}
+.workspace{max-width:1120px;margin:1rem auto 2rem;padding:0 2rem;display:grid;grid-template-columns:1fr 1.15fr;gap:1.5rem;align-items:start}
+.panel{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem}
+.panel h2{font-size:1.05rem;font-weight:800;margin-bottom:.85rem;color:var(--text-primary)}
+.toolbar{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem;align-items:center}
+.btn{padding:.55rem .9rem;min-height:42px;border-radius:8px;border:1px solid var(--border);background:var(--bg-secondary);color:var(--text-primary);font:inherit;font-size:.8rem;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:.35rem;text-decoration:none}
+.btn:hover{border-color:var(--accent-2)}
+.btn-primary{background:linear-gradient(135deg,var(--accent-1),var(--accent-3));color:#fff;border:none}
+.field{display:flex;flex-direction:column;gap:.35rem;margin-bottom:1rem}.field label{font-size:.78rem;font-weight:700;color:var(--text-secondary)}.hint{font-size:.74rem;color:var(--text-muted)}
+.field textarea,.field select{width:100%;min-height:46px;padding:.7rem .85rem;border-radius:8px;border:1px solid var(--border);background:var(--bg-primary);color:var(--text-primary);font:inherit;font-size:max(1rem,1em)}.field textarea{min-height:260px;font-family:var(--mono);font-size:.78rem;line-height:1.55;resize:vertical}
+.file-drop{border:1px dashed var(--accent-2);border-radius:10px;padding:.75rem 1rem;background:rgba(99,102,241,.06);font-size:.8rem;color:var(--text-secondary);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;margin-bottom:1rem}
+.stat-card{background:var(--bg-secondary);border:1px solid var(--border);border-radius:10px;padding:.65rem;text-align:center}.stat-card .v{font-size:1.2rem;font-weight:900;line-height:1.2}.stat-card .l{font-size:.66rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.04em}
+.good{color:var(--accent-ok)}.warn{color:var(--accent-warn)}.bad{color:var(--accent-bad)}
+.score-banner{background:var(--bg-secondary);border:1px solid var(--border);border-radius:10px;padding:.85rem 1rem;margin-bottom:1rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}
+.tablist{display:flex;flex-wrap:wrap;gap:.2rem;border-bottom:1px solid var(--border);margin-bottom:1rem}.tablist button{position:relative;background:none;border:none;color:var(--text-secondary);font:inherit;font-size:.8rem;font-weight:600;padding:.55rem .8rem;cursor:pointer;min-height:44px}.tablist button[aria-selected="true"]{color:var(--accent-2)}.tablist button[aria-selected="true"]::after{content:"";position:absolute;inset:auto 0 0;border-block-end:3px solid var(--accent-2)}
+.check-list{list-style:none;display:grid;gap:.45rem;font-size:.82rem}.check-list li{padding:.55rem .75rem;background:var(--bg-secondary);border:1px solid var(--border);border-radius:8px;display:flex;justify-content:space-between;gap:.75rem;align-items:center}
+.outline-list{list-style:none;display:grid;gap:.35rem;font-size:.82rem;max-height:280px;overflow:auto}.outline-list li{padding:.4rem .65rem;background:var(--bg-secondary);border-left:3px solid var(--accent-1);border-radius:4px}
+.code-wrap{position:relative;background:var(--bg-primary);border:1px solid var(--border);border-radius:8px;padding:.9rem;margin-top:.75rem}.code-wrap pre{overflow:auto;max-height:240px;padding-inline-end:3.25rem;font-family:var(--mono);font-size:.76rem;color:#c7d2fe;line-height:1.5}
+.copy{position:absolute;inset-block-start:.5rem;inset-inline-end:.5rem;display:inline-flex;align-items:center;gap:.4rem}.copy-button{min-inline-size:32px;min-block-size:32px;padding:.3rem .65rem;border-radius:6px;border:1px solid var(--border);background:var(--bg-card);color:var(--text-primary);font:inherit;font-size:.74rem;font-weight:600;cursor:pointer}.tip{font-size:.72rem;color:var(--accent-ok);opacity:0;transition:opacity .15s}.copy-button[data-copied]+.tip,.copy-button[data-failed]+.tip{opacity:1}
+.bookmark-box{max-width:1120px;margin:0 auto 2rem;padding:0 2rem}.bm-link{display:inline-block;padding:.5rem 1rem;background:linear-gradient(135deg,var(--accent-1),var(--accent-3));color:#fff;font-weight:700;font-size:.82rem;border-radius:8px;text-decoration:none}
+.content-section{max-width:860px;margin:0 auto;padding:1.5rem 2rem}.content-section h2{font-size:1.55rem;font-weight:800;margin-bottom:.9rem}.content-section h3{font-size:1.15rem;font-weight:700;margin:1.35rem 0 .6rem}.content-section p,.content-section li{color:var(--text-secondary);margin-bottom:.95rem}.content-section ul{padding-left:1.35rem}
+.faq-section{max-width:860px;margin:1.5rem auto 2rem;padding:0 2rem}.faq-section h2{font-size:1.45rem;font-weight:800;margin-bottom:1rem}.faq-section details{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:.65rem}.faq-section summary{padding:.9rem 1.2rem;cursor:pointer;font-weight:700;font-size:.92rem}.faq-section details p{padding:.25rem 1.2rem 1rem;color:var(--text-secondary);font-size:.88rem}
+.site-footer{border-top:1px solid var(--border);background:var(--bg-secondary);margin-top:3rem}.footer-grid{max-width:1200px;margin:0 auto;padding:3rem 2rem 2rem;display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:2.5rem}.footer-brand .footer-logo{font-weight:800;font-size:1.1rem;color:var(--accent-2);text-decoration:none;display:block;margin-bottom:.75rem}.footer-brand p{font-size:.82rem;color:var(--text-muted);line-height:1.7}.footer-col h4{font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-muted);margin-bottom:.75rem;font-weight:600}.footer-col ul{list-style:none}.footer-col li{margin-bottom:.35rem}.footer-col a{color:var(--text-secondary);text-decoration:none;font-size:.82rem}.footer-bottom{max-width:1200px;margin:0 auto;padding:1.25rem 2rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}.footer-bottom p{color:var(--text-muted);font-size:.72rem}.footer-bottom .keyword{color:var(--accent-3);font-weight:600}
+@media(max-width:920px){.workspace{grid-template-columns:1fr}.stat-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.nav-toggle{display:flex}.nav-menu{position:fixed;top:0;right:-300px;width:280px;height:100vh;background:var(--bg-primary);border-left:1px solid var(--border);padding:4rem 1.5rem 2rem;transition:right .3s;z-index:200;overflow-y:auto}.nav-menu.open{right:0}.nav-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:150}.nav-overlay.open{display:block}.nav-links{flex-direction:column;align-items:stretch;gap:0}.nav-links>li>a{padding:.7rem .5rem;font-size:.9rem}.dropdown{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:none;background:transparent;padding:0 0 .5rem 1rem;display:none}.has-dropdown.open .dropdown{display:block}.footer-grid{grid-template-columns:1fr 1fr;gap:2rem}}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<header class="site-header"><nav class="nav-inner" aria-label="Primary"><a href="../" class="brand"><span class="brand-mark">HS99</span><span class="brand-name">SEO by <span>HighSoftware99</span></span></a><button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button><div class="nav-overlay" id="nav-overlay"></div><div class="nav-menu" id="nav-menu"><ul class="nav-links"><li class="has-dropdown"><a href="../technical-seo/" aria-haspopup="true">Services <span class="caret" aria-hidden="true"></span></a><ul class="dropdown"><li><a href="../technical-seo/">Technical SEO</a></li><li><a href="../local-seo/">Local SEO</a></li><li><a href="../on-page-seo">On-Page SEO</a></li><li><a href="../off-page-seo">Off-Page SEO</a></li><li><a href="../ecommerce-seo">E-Commerce SEO</a></li><li><a href="../youtube-seo">YouTube SEO</a></li></ul></li><li class="has-dropdown"><a href="../locations/" aria-haspopup="true">Locations <span class="caret" aria-hidden="true"></span></a><ul class="dropdown"><li><a href="../locations/">All Service Locations</a></li><li><a href="../seo-new-york">SEO New York</a></li><li><a href="../seo-los-angeles">SEO Los Angeles</a></li><li><a href="../seo-chicago">SEO Chicago</a></li><li><a href="../seo-houston">SEO Houston</a></li></ul></li><li><a href="../tools/">Tools</a></li><li><a href="../blog">Blog</a></li><li><a href="../about">About</a></li><li><a href="../pricing">Pricing</a></li><li><a href="../contact" class="nav-cta">Get Audit</a></li></ul></div></nav></header>
+
+<main id="main-content">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="../">Home</a></li><li><a href="./">Free SEO Tools</a></li><li aria-current="page">DOM &amp; HTML5 Auditor</li></ol></nav>
+
+  <section class="hero" aria-label="DOM Size and Semantic HTML5 Auditor">
+    <h1><span class="hl">DOM Size &amp; Semantic HTML5</span> Auditor</h1>
+    <p class="subtitle">Measure exact DOM node counts, max tree depth, Cost of Retrieval byte ratios, semantic landmarks, <code>H1–H6</code> hierarchy, and JSON-LD syntax errors locally with native <code>DOMParser()</code>.</p>
+  </section>
+
+  <section class="workspace" aria-label="HTML Source Audit Workspace">
+    <div class="panel">
+      <h2>1. Load or Paste Page HTML</h2>
+      <div class="toolbar">
+        <button type="button" class="btn" id="btn-clean">Load Clean Sample</button>
+        <button type="button" class="btn" id="btn-bloated">Load Bloated Sample</button>
+        <button type="button" class="btn" id="btn-self">Audit This Page</button>
+      </div>
+      <div class="file-drop">
+        <span>Or upload any saved <code>.html</code> file:</span>
+        <label for="file-html" style="cursor:pointer;color:var(--accent-2);font-weight:700">Choose .html file</label>
+        <input type="file" id="file-html" accept=".html,.htm,text/html" style="max-width:210px;font-size:.76rem">
+      </div>
+      <div class="field">
+        <label for="html-src">HTML Source Code (View Source: Ctrl+U / Cmd+Opt+U)</label>
+        <span class="hint" id="html-hint">Runs locally in browser memory. Nothing is sent over the network.</span>
+        <textarea id="html-src" aria-describedby="html-hint" spellcheck="false"></textarea>
+      </div>
+      <div class="toolbar">
+        <button type="button" class="btn btn-primary" id="btn-run">Run Deep DOM Audit</button>
+        <button type="button" class="btn" id="btn-export">Export JSON Report</button>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>2. Cost of Retrieval &amp; Technical Scorecard</h2>
+      <div class="score-banner">
+        <div><strong id="score-label">DOM Health Score:</strong> <span id="score-val" class="good" style="font-size:1.35rem;font-weight:900">100/100</span></div>
+        <span class="hint" id="ratio-badge">Text/HTML Ratio: 0%</span>
+      </div>
+      <div class="stat-grid" aria-live="polite">
+        <div class="stat-card"><div class="v" id="m-nodes">0</div><div class="l">DOM Nodes</div></div>
+        <div class="stat-card"><div class="v" id="m-depth">0</div><div class="l">Max Depth</div></div>
+        <div class="stat-card"><div class="v" id="m-children">0</div><div class="l">Max Children</div></div>
+        <div class="stat-card"><div class="v" id="m-kb">0 KB</div><div class="l">HTML Size</div></div>
+      </div>
+
+      <div class="tablist" role="tablist" aria-label="Audit Breakdown Tabs">
+        <button type="button" role="tab" id="at-meta" aria-selected="true" aria-controls="ap-meta">Indexability &amp; Meta</button>
+        <button type="button" role="tab" id="at-sem" aria-selected="false" aria-controls="ap-sem">Semantics &amp; Headings</button>
+        <button type="button" role="tab" id="at-links" aria-selected="false" aria-controls="ap-links">Images, Links &amp; JSON-LD</button>
+      </div>
+
+      <div id="ap-meta" role="tabpanel" aria-labelledby="at-meta">
+        <ul class="check-list" id="list-meta"></ul>
+      </div>
+      <div id="ap-sem" role="tabpanel" aria-labelledby="at-sem" hidden="until-found">
+        <ul class="check-list" id="list-sem" style="margin-bottom:1rem"></ul>
+        <h3 style="font-size:.86rem;margin-bottom:.45rem;color:var(--text-primary)">Document Heading Outline (<code>H1–H6</code>)</h3>
+        <ul class="outline-list" id="list-outline"></ul>
+      </div>
+      <div id="ap-links" role="tabpanel" aria-labelledby="at-links" hidden="until-found">
+        <ul class="check-list" id="list-links"></ul>
+        <div class="code-wrap"><span class="copy"><button type="button" class="copy-button" command="--copy" commandfor="jsonld-summary" aria-label="Copy parsed JSON-LD diagnostics">Copy</button><span class="tip" role="status"></span></span><pre tabindex="0"><code id="jsonld-summary"></code></pre></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bookmark-box" aria-label="Zero-CORS Live Bookmarklet">
+    <div class="panel">
+      <h2>3. Zero-CORS Live Page Bookmarklet (Inspect Any Website Instantly)</h2>
+      <p class="hint" style="margin-bottom:.75rem">Browsers block remote sites from fetching external URLs directly via CORS. Drag this button to your browser bookmarks bar (or copy the script) to audit DOM nodes, depth, canonical tags, and headings live on any open tab:</p>
+      <div class="toolbar">
+        <a id="bm-href" class="bm-link" href="javascript:void(0)">HS99 Quick DOM Audit</a>
+        <span class="hint">Drag to bookmarks bar or copy snippet below</span>
+      </div>
+      <div class="code-wrap"><span class="copy"><button type="button" class="copy-button" command="--copy" commandfor="bm-code" aria-label="Copy bookmarklet JavaScript">Copy JS</button><span class="tip" role="status"></span></span><pre tabindex="0"><code id="bm-code"></code></pre></div>
+    </div>
+  </section>
+
+  <article class="content-section">
+    <h2>Why DOM Size Controls Googlebot's Cost of Retrieval</h2>
+    <p>Every excess <code>&lt;div&gt;</code> wrapper, inline SVG sprite, or hydrated JavaScript container increases HTML transfer bytes, parse time, and layout work before search crawlers can index your centerpiece text. Keeping total DOM elements below <strong>800</strong> and depth under <strong>32 levels</strong> directly aligns with Core Web Vitals thresholds and clean semantic extraction.</p>
+    <h3>Key Audit Signals Checked Here</h3>
+    <ul>
+      <li><strong>Cost of Retrieval Ratio:</strong> Compares visible extracted text bytes against total raw HTML bytes so template bloat is surfaced immediately.</li>
+      <li><strong>Semantic HTML5 Landmarks:</strong> Confirms explicit <code>&lt;main&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;footer&gt;</code> boundaries around the primary document topic.</li>
+      <li><strong>Pixel-Accurate Title Measurement &amp; Clean URL Hygiene:</strong> Measures extracted <code>&lt;title&gt;</code> pixel width via Canvas 2D and flags internal <code>.html</code> hrefs or missing <code>&lt;img width height&gt;</code> attributes.</li>
+    </ul>
+  </article>
+
+  <section class="faq-section" aria-label="Frequently Asked Questions">
+    <h2>DOM &amp; HTML5 Auditor FAQs</h2>
+    <details><summary>What is Google's recommended DOM size limit for Cost of Retrieval and Core Web Vitals?</summary><p>Google Lighthouse warns above 800 total DOM nodes and flags excess DOM size above 1,400–1,500 nodes, depth over 32 levels, or more than 60 children inside one parent element.</p></details>
+    <details><summary>Why does DOMParser audit HTML accurately without a backend API?</summary><p>The browser's built-in <code>DOMParser()</code> constructs an actual DOM tree in memory, reporting exact node counts, nesting depth, headings, images, links, and JSON-LD validity locally.</p></details>
+    <details><summary>How can I audit external websites blocked by browser CORS policies?</summary><p>Paste the page source directly, drop a saved <code>.html</code> file, or trigger the HS99 Bookmarklet inside the target tab.</p></details>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="footer-grid"><div class="footer-brand"><a href="../" class="footer-logo">HighSoftware99</a><p>HighSoftware99 delivers technical SEO, local SEO, and free client-side SEO tools grounded in Semantic SEO.</p></div><div class="footer-col"><h4>Services</h4><ul><li><a href="../technical-seo/">Technical SEO</a></li><li><a href="../local-seo/">Local SEO</a></li><li><a href="../on-page-seo">On-Page SEO</a></li><li><a href="../ecommerce-seo">E-Commerce SEO</a></li></ul></div><div class="footer-col"><h4>Free Tools</h4><ul><li><a href="serp-preview-tool">SERP Pixel Checker</a></li><li><a href="schema-markup-generator">Schema Generator</a></li><li><a href="dom-html-auditor">DOM &amp; HTML Auditor</a></li><li><a href="robots-llms-txt-generator">robots.txt &amp; llms.txt</a></li><li><a href="redirect-rule-generator">Bulk 301 Generator</a></li></ul></div><div class="footer-col"><h4>Guides</h4><ul><li><a href="../on-page-seo-checklist">On-Page Checklist</a></li><li><a href="../technical-seo-guide">Technical SEO Guide</a></li><li><a href="../blog">All Blog Guides</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 HighSoftware99. All rights reserved.</p><p>seo-byhighsoftware99.com &middot; <span class="keyword">Instant Appear by SEO by HighSoftware99</span></p></div></footer>
+
+<script>
+(function(){
+  var srcEl=document.getElementById('html-src'),canvas=document.createElement('canvas'),ctx=canvas.getContext('2d');
+  var lastReport={};
+  function escHtml(s){return String(s).replace(/[&<>"']/g,function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m];});}
+  function pxWidth(text,font){ctx.font=font;return Math.round(ctx.measureText(text||'').width);}
+
+  var cleanSample='<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8">\n  <title>Technical SEO Audit Guide (2026) | HighSoftware99</title>\n  <meta name="description" content="Step-by-step technical SEO audit covering DOM size, Core Web Vitals, clean canonical URLs, and structured schema markup.">\n  <meta name="robots" content="index, follow">\n  <link rel="canonical" href="https://seo-byhighsoftware99.com/seo-audit-guide">\n  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Technical SEO Audit Guide"}<\/script>\n</head>\n<body>\n  <header><nav aria-label="Primary"><a href="/">Home</a><a href="/tools/">Tools</a></nav></header>\n  <main>\n    <article>\n      <h1>Technical SEO Audit Guide</h1>\n      <img src="/images/seo-framework-hero.webp" alt="Technical SEO Framework Diagram" width="1024" height="1024">\n      <p>Clean semantic HTML5 lowers Cost of Retrieval for search crawlers and improves Largest Contentful Paint.</p>\n      <h2>1. Measure DOM Node Depth</h2>\n      <p>Keep total nodes under 800 and avoid unnecessary wrapper divs around primary content.</p>\n      <h2>2. Consolidate Canonical Signals</h2>\n      <p>Remove extensionless duplicates and internal redirect hops.</p>\n    </article>\n  </main>\n  <footer><p>HighSoftware99</p></footer>\n</body>\n</html>';
+
+  function buildBloatedSample(){
+    var divs='',i;
+    for(i=0;i<75;i++)divs+='<div class="grid-card"><div class="inner"><div class="pad"><span>Item '+i+'</span><'+'a hr'+'ef="/old-page.'+'html">Link</a></div></div></div>\n';
+    return '<!DOCTYPE html><html><head><title>Extremely Long Over-Stuffed Legacy Landing Page Title That Easily Exceeds Google 580 Pixel Limit And Truncates In Search Results Everywhere Online</title></head><body><div id="app"><div class="wrap"><div class="box"><div class="row"><div class="col"><'+'im'+'g sr'+'c="/hero.jpg"><h3>Skipped Directly to H3 Without H1</h3>'+divs+'</div></div></div></div></div></body></html>';
+  }
+
+  function auditHtml(raw){
+    var doc=new DOMParser().parseFromString(raw||'<!DOCTYPE html><html><body></body></html>','text/html');
+    var allEls=doc.querySelectorAll('*'),nodes=allEls.length,maxDepth=0,maxChildren=0;
+    function walk(node,depth){
+      if(node.nodeType!==1)return;
+      if(depth>maxDepth)maxDepth=depth;
+      if(node.children.length>maxChildren)maxChildren=node.children.length;
+      for(var i=0;i<node.children.length;i++)walk(node.children[i],depth+1);
+    }
+    if(doc.documentElement)walk(doc.documentElement,1);
+
+    var rawBytes=new Blob([raw]).size;
+    var bodyClone=doc.body?doc.body.cloneNode(true):null;
+    var inlineAssetBytes=0;
+    doc.querySelectorAll('script:not([src]),style').forEach(function(el){inlineAssetBytes+=el.textContent.length;});
+    if(bodyClone)bodyClone.querySelectorAll('script,style,noscript,svg').forEach(function(x){x.remove();});
+    var visibleText=(bodyClone?bodyClone.textContent:'').replace(/\s+/g,' ').trim();
+    var textBytes=new Blob([visibleText]).size;
+    var words=visibleText?visibleText.split(/\s+/).length:0;
+    var ratio=rawBytes?Math.round(textBytes/rawBytes*1000)/10:0;
+
+    var titleEl=doc.querySelector('title'),titleText=titleEl?titleEl.textContent.trim():'';
+    var titlePx=pxWidth(titleText,'400 20px Arial,sans-serif');
+    var descEl=doc.querySelector('meta[name="description"]'),descText=descEl?(descEl.getAttribute('content')||'').trim():'';
+    var canEl=doc.querySelector('link[rel="canonical"]'),canHref=canEl?(canEl.getAttribute('href')||''):'';
+    var robEl=doc.querySelector('meta[name="robots"]'),robVal=robEl?(robEl.getAttribute('content')||''):'Not declared (defaults to index, follow)';
+
+    var h1s=doc.querySelectorAll('h1'),headings=doc.querySelectorAll('h1,h2,h3,h4,h5,h6');
+    var skipped=0,prevLv=0,outline=[];
+    headings.forEach(function(h){
+      var lv=parseInt(h.tagName.slice(1),10);
+      if(prevLv&&lv>prevLv+1)skipped++;
+      prevLv=lv;
+      outline.push({lv:lv,txt:h.textContent.trim()||'(empty heading)'});
+    });
+
+    var hasMain=!!doc.querySelector('main'),hasHeader=!!doc.querySelector('header'),hasNav=!!doc.querySelector('nav'),hasArticle=!!doc.querySelector('article'),hasFooter=!!doc.querySelector('footer');
+    var imgs=doc.querySelectorAll('img'),missingAlt=0,missingDim=0;
+    imgs.forEach(function(im){if(!im.hasAttribute('alt')||im.getAttribute('alt').trim()==='')missingAlt++;if(!im.getAttribute('width')||!im.getAttribute('height'))missingDim++;});
+    var anchors=doc.querySelectorAll('a[href]'),dotHtml=0;
+    anchors.forEach(function(a){var h=a.getAttribute('href')||'';if(!/^https?:/i.test(h)&&/\.html($|[?#])/i.test(h))dotHtml++;});
+
+    var ldScripts=doc.querySelectorAll('script[type="application/ld+json"]'),ldOk=0,ldErr=0,ldTypes=[];
+    ldScripts.forEach(function(s){
+      try{
+        var parsed=JSON.parse(s.textContent);ldOk++;
+        if(parsed['@graph'])parsed['@graph'].forEach(function(g){if(g['@type'])ldTypes.push(g['@type']);});
+        else if(parsed['@type'])ldTypes.push(parsed['@type']);
+      }catch(e){ldErr++;}
+    });
+
+    var score=100;
+    if(nodes>1500)score-=20;else if(nodes>800)score-=8;
+    if(maxDepth>32)score-=10;if(maxChildren>60)score-=8;
+    if(!titleText||titlePx>580)score-=10;if(!descText)score-=8;if(!canHref)score-=10;
+    if(h1s.length!==1)score-=10;if(skipped>0)score-=5;if(!hasMain)score-=6;
+    if(missingAlt>0)score-=5;if(dotHtml>0)score-=5;if(ldErr>0||ldScripts.length===0)score-=8;
+    score=Math.max(0,score);
+
+    lastReport={score:score,nodes:nodes,maxDepth:maxDepth,maxChildren:maxChildren,rawBytes:rawBytes,visibleTextWords:words,textToHtmlRatioPct:ratio,title:{text:titleText,chars:titleText.length,pixels:titlePx},metaDescriptionLength:descText.length,canonical:canHref,robots:robVal,h1Count:h1s.length,skippedHeadings:skipped,landmarks:{main:hasMain,header:hasHeader,nav:hasNav,article:hasArticle,footer:hasFooter},images:{total:imgs.length,missingAlt:missingAlt,missingDimensions:missingDim},links:{total:anchors.length,internalDotHtml:dotHtml},jsonLd:{blocks:ldScripts.length,valid:ldOk,errors:ldErr,types:ldTypes}};
+
+    var nEl=document.getElementById('m-nodes');nEl.textContent=nodes;nEl.className='v '+(nodes<=800?'good':nodes<=1500?'warn':'bad');
+    var dEl=document.getElementById('m-depth');dEl.textContent=maxDepth;dEl.className='v '+(maxDepth<=32?'good':'bad');
+    var cEl=document.getElementById('m-children');cEl.textContent=maxChildren;cEl.className='v '+(maxChildren<=60?'good':'bad');
+    document.getElementById('m-kb').textContent=(rawBytes/1024).toFixed(1)+' KB';
+    var scEl=document.getElementById('score-val');scEl.textContent=score+'/100';scEl.className=(score>=85?'good':score>=65?'warn':'bad');
+    document.getElementById('ratio-badge').textContent='Text/HTML Ratio: '+ratio+'% | Words: '+words+' | Inline Code: '+(inlineAssetBytes/1024).toFixed(1)+' KB';
+
+    function row(k,v,cls){return '<li><span>'+k+'</span><span class="'+cls+'">'+escHtml(v)+'</span></li>';}
+    document.getElementById('list-meta').innerHTML=[
+      row('&lt;title&gt; ('+titleText.length+' chars / '+titlePx+' px)',titleText||'Missing',titleText&&titlePx<=580?'good':titleText?'warn':'bad'),
+      row('Meta Description ('+descText.length+' chars)',descText?descText.slice(0,90)+(descText.length>90?'...':''):'Missing',descText.length>=100&&descText.length<=160?'good':descText?'warn':'bad'),
+      row('Canonical URL',canHref||'Missing',canHref?'good':'bad'),
+      row('Robots Directive',robVal,/noindex/i.test(robVal)?'warn':'good'),
+      row('Visible Copy Word Count',words+' words',words>=300?'good':'warn')
+    ].join('');
+
+    document.getElementById('list-sem').innerHTML=[
+      row('HTML5 &lt;main&gt; landmark',hasMain?'Present':'Missing',hasMain?'good':'bad'),
+      row('&lt;header&gt; / &lt;nav&gt; / &lt;footer&gt;',(hasHeader&&hasNav&&hasFooter)?'All 3 present':'Incomplete',(hasHeader&&hasNav&&hasFooter)?'good':'warn'),
+      row('&lt;article&gt; wrapper',hasArticle?'Present':'Missing',hasArticle?'good':'warn'),
+      row('H1 Count',h1s.length+' (target: 1)',h1s.length===1?'good':'bad'),
+      row('Skipped Heading Levels',skipped+' skips',skipped===0?'good':'warn')
+    ].join('');
+
+    document.getElementById('list-outline').innerHTML=outline.length?outline.map(function(o){
+      return '<li style="margin-left:'+((o.lv-1)*14)+'px"><strong>H'+o.lv+'</strong> — '+escHtml(o.txt)+'</li>';
+    }).join(''):'<li>No headings H1–H6 detected.</li>';
+
+    document.getElementById('list-links').innerHTML=[
+      row('Total &lt;img&gt; Tags',imgs.length+' found','good'),
+      row('Images Missing alt',missingAlt+'',missingAlt===0?'good':'bad'),
+      row('Images Missing width/height (CLS)',missingDim+'',missingDim===0?'good':'warn'),
+      row('Total Anchors &amp; Internal .html Links',anchors.length+' links ('+dotHtml+' .html)',dotHtml===0?'good':'warn'),
+      row('JSON-LD Schema Blocks',ldScripts.length+' ('+ldOk+' valid, '+ldErr+' error)',ldScripts.length>0&&ldErr===0?'good':'bad')
+    ].join('');
+
+    document.getElementById('jsonld-summary').textContent=ldScripts.length?('Detected Types: '+(ldTypes.length?ldTypes.join(', '):'None')+'\nValid Blocks: '+ldOk+'\nSyntax Errors: '+ldErr):'No <script type="application/ld+json"> found. Generate valid JSON-LD with our Schema Markup Generator.';
+  }
+
+  var bmScript="javascript:(function(){var n=document.querySelectorAll('*').length,h1=document.querySelectorAll('h1').length,t=document.title,c=(document.querySelector('link[rel=canonical]')||{}).href||'MISSING',m=!!document.querySelector('main'),ld=document.querySelectorAll('script[type=\"application/ld+json\"]').length;var d=document.createElement('div');d.style.cssText='position:fixed;bottom:16px;right:16px;z-index:2147483647;background:#0a0e1a;color:#f1f5f9;border:2px solid #6366f1;border-radius:12px;padding:14px 18px;font:13px/1.6 system-ui,sans-serif;max-width:340px;box-shadow:0 12px 32px rgba(0,0,0,.6)';d.innerHTML='<strong style=\"color:#818cf8\">HS99 Live DOM Audit</strong><br>Nodes: <b>'+n+'</b> | H1: <b>'+h1+'</b> | &lt;main&gt;: <b>'+m+'</b> | JSON-LD: <b>'+ld+'</b><br>Title ('+t.length+'): '+t.slice(0,55)+'<br>Canonical: '+c+'<br><button id=\"hs99-close\" style=\"margin-top:8px;padding:4px 10px;background:#6366f1;color:#fff;border:0;border-radius:6px;cursor:pointer\">Close</button>';document.body.appendChild(d);document.getElementById('hs99-close').onclick=function(){d.remove();};})();";
+  document.getElementById('bm-href').setAttribute('href',bmScript);
+  document.getElementById('bm-code').textContent=bmScript;
+
+  document.getElementById('btn-clean').addEventListener('click',function(){srcEl.value=cleanSample;auditHtml(cleanSample);});
+  document.getElementById('btn-bloated').addEventListener('click',function(){var b=buildBloatedSample();srcEl.value=b;auditHtml(b);});
+  document.getElementById('btn-self').addEventListener('click',function(){var selfHtml='<!DOCTYPE html>\n'+document.documentElement.outerHTML;srcEl.value=selfHtml;auditHtml(selfHtml);});
+  document.getElementById('btn-run').addEventListener('click',function(){auditHtml(srcEl.value);});
+  document.getElementById('file-html').addEventListener('change',function(e){
+    var f=e.target.files[0];if(!f)return;
+    var r=new FileReader();r.onload=function(){srcEl.value=r.result;auditHtml(r.result);};r.readAsText(f);
+  });
+  document.getElementById('btn-export').addEventListener('click',function(){
+    var blob=new Blob([JSON.stringify(lastReport,null,2)],{type:'application/json'}),a=document.createElement('a');
+    a.href=URL.createObjectURL(blob);a.download='dom-html-audit-report.json';document.body.appendChild(a);a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+  });
+
+  var tabs=document.querySelectorAll('[role="tab"]'),panels=document.querySelectorAll('[role="tabpanel"]');
+  function selectTab(id){
+    var k=id.replace('at-','');
+    tabs.forEach(function(t){t.setAttribute('aria-selected',String(t.id===id));});
+    panels.forEach(function(p){if(p.id==='ap-'+k)p.removeAttribute('hidden');else p.setAttribute('hidden','until-found');});
+  }
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){selectTab(t.id);});
+    t.addEventListener('keydown',function(e){
+      var list=Array.from(tabs),i=list.indexOf(t);
+      if(e.key==='ArrowRight'){e.preventDefault();var n=list[(i+1)%list.length];n.focus();selectTab(n.id);}
+      if(e.key==='ArrowLeft'){e.preventDefault();var p=list[(i-1+list.length)%list.length];p.focus();selectTab(p.id);}
+    });
+  });
+  panels.forEach(function(p){p.addEventListener('beforematch',function(){selectTab(p.getAttribute('aria-labelledby'));});});
+
+  var timers=new WeakMap(),lastMsg='';
+  function report(btn,ok){
+    var tip=btn.nextElementSibling;clearTimeout(timers.get(btn));
+    btn.removeAttribute('data-copied');btn.removeAttribute('data-failed');
+    var msg=ok?'Copied':'Copy failed';if(msg===lastMsg)msg+='\u00A0';lastMsg=msg;
+    tip.textContent='';void btn.offsetWidth;btn.setAttribute(ok?'data-copied':'data-failed','');
+    requestAnimationFrame(function(){tip.textContent=msg;});
+    timers.set(btn,setTimeout(function(){btn.removeAttribute('data-copied');btn.removeAttribute('data-failed');tip.textContent='';},2000));
+  }
+  async function copyEl(btn,target){
+    var text=target.innerText.trim();if(!text)return;
+    try{await navigator.clipboard.writeText(text);report(btn,true);}catch{report(btn,false);}
+  }
+  if('CommandEvent' in window){document.addEventListener('command',function(e){if(e.command==='--copy')copyEl(e.source,e.target);},true);}
+  else{document.addEventListener('click',function(e){var b=e.target.closest('button[command="--copy"]');if(b){var t=document.getElementById(b.getAttribute('commandfor'));if(t)copyEl(b,t);}});}
+
+  srcEl.value=cleanSample;auditHtml(cleanSample);
+  document.getElementById('nav-toggle').addEventListener('click',function(){var m=document.getElementById('nav-menu'),o=document.getElementById('nav-overlay');var isOpen=m.classList.toggle('open');o.classList.toggle('open',isOpen);this.setAttribute('aria-expanded',isOpen);});
+  document.getElementById('nav-overlay').addEventListener('click',function(){document.getElementById('nav-menu').classList.remove('open');this.classList.remove('open');document.getElementById('nav-toggle').setAttribute('aria-expanded','false');});
+  document.querySelectorAll('.has-dropdown > a').forEach(function(a){a.addEventListener('click',function(e){if(window.innerWidth<=768){e.preventDefault();this.parentElement.classList.toggle('open');}});});
+  window.addEventListener('load',function(){var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-BW37189SQ9';s.async=true;document.head.appendChild(s);s.onload=function(){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BW37189SQ9');};});
+})();
+</script>
+</body>
+</html>
+
